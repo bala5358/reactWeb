@@ -113,19 +113,7 @@ export const MENUITEMS = [
       // { path: `/guardian`, icon: "user", title: "Guardian List", type: "link" },
        { path: `/guardian`,icon: "user",  title: "Guardian", type: "link" },
         { path: `/pollday`, icon: "knowledgebase", type: "link", active: true, title: "Poll" },
-      { path: `/app/file-manager`, icon: "file", title: "File-Manager", type: "link" },
      
-
-      {
-        title: "Chat",
-        icon: "chat",
-        type: "sub",
-        active: false,
-        children: [
-          { path: `/app/chat-app/chats`, type: "link", title: "Chats" },
-          { path: `/app/chat-app/chat-video-app`, type: "link", title: "Video-app" },
-        ],
-      },
       // {
       //   title: "Users",
       //   icon: "user",
@@ -223,6 +211,19 @@ export const MENUITEMS = [
       },
 
       { path: `/app/knowledgebase`, icon: "knowledgebase", type: "link", active: false, title: "Knowledgebase" },
+       { path: `/app/file-manager`, icon: "file", title: "File-Manager", type: "link" },
+     
+
+      {
+        title: "Chat",
+        icon: "chat",
+        type: "sub",
+        active: false,
+        children: [
+          { path: `/app/chat-app/chats`, type: "link", title: "Chats" },
+          { path: `/app/chat-app/chat-video-app`, type: "link", title: "Video-app" },
+        ],
+      },
     ],
   },
 ];

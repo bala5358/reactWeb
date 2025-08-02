@@ -134,7 +134,7 @@ const UploadBoxOnly = () => {
       // Helper function for upload with flag
       const uploadToServer = async (data, allowPartial = false) => {
         const response = await fetch(
-          "http://localhost:5000/api/voters/upload-voters",
+          "https://rthythm-backend.vercel.app/api/voters/upload-voters",
           {
             method: "POST",
             headers: {

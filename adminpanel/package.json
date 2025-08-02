@@ -61,7 +61,7 @@
     "react-google-charts": "^4.0.0",
     "react-gradient-timepicker": "^0.0.3",
     "react-hook-form": "^7.43.9",
-    "react-i18next": "^15.1.0",
+    "react-i18next": "^13.2.2",
     "react-icons": "^4.8.0",
     "react-image-crop": "^10.0.9",
     "react-leaflet": "^4.2.1",

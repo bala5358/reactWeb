@@ -78,7 +78,8 @@ import GroupButton from "../Components/Buttons/GroupBtn/index";
 import ApexCharts from "../Components/Charts/ApexCharts";
 import ChartJs from "../Components/Charts/ChartsJs";
 import GoogleCharts from "../Components/Charts/GoogleCharts";
-
+import Birthday from "../Components/Dashboard/Default/Birthday";
+import Above80 from "../Components/Dashboard/Default/Above80";
 // //forms
 import FormValidation from "../Components/Forms/FormControl/FormValidation";
 import BaseInput from "../Components/Forms/FormControl/BaseInput";
@@ -199,7 +200,8 @@ export const routes = [
   { path: `/dashboard/online-course/:layout`, Component: <OnlineCourse /> },
   { path: `/dashboard/crypto/:layout`, Component: <Crypto /> },
   { path: `/dashboard/social/:layout`, Component: <Social /> },
-
+  { path: `${process.env.PUBLIC_URL}/dashboard/default/birthday/:layout`, Component: <Birthday /> },
+  { path: `${process.env.PUBLIC_URL}/dashboard/default/Above80/:layout`, Component: <Above80/> },
   { path: `/widgets/general/:layout`, Component: <General /> },
   { path: `/widgets/chart/:layout`, Component: <Chart /> },
 
@@ -316,6 +318,7 @@ export const routes = [
   // Star bala
   { path: `/app/ecommerce/cart/:layout`, Component: <ProductCart /> },
     { path: `/voter/:layout`, Component: <Voter /> },
+  
   // End
   { path: `/app/ecommerce/wishlist/:layout`, Component: <WishList /> },
   { path: `/app/ecommerce/checkout/:layout`, Component: <CheckOut /> },

@@ -1,42 +1,62 @@
 [
     {
         "id": 1,
-        "name": "Logo.psd",
-        "size": "2.0 MB",
-        "modify": "1 hour ago",
+        "name": "Election_Logo.psd",
+        "size": "2.5 MB",
+        "modify": "2 hours ago",
         "icon": "fa fa-file-image-o txt-primary",
         "folderclass": "fa fa-file-archive-o f-36 txt-warning",
-        "title": "Endless Admin",
-        "foldersize": "204 files, 50mb"
+        "title": "TN Election 2024",
+        "foldersize": "215 files, 55mb"
     },
     {
         "id": 2,
-        "name": "Project.zip",
-        "size": "1.90 GB",
-        "modify": "1 hour ago",
+        "name": "Voter_Data.zip",
+        "size": "1.75 GB",
+        "modify": "3 hours ago",
         "icon": "fa fa-file-archive-o txt-secondary",
         "folderclass": "fa fa-folder f-36 txt-warning",
-        "title": "Endless Admin",
-        "foldersize": "101 files, 10mb"
+        "title": "TN Election 2024",
+        "foldersize": "120 files, 15mb"
     },
     {
         "id": 3,
-        "name": "Backend.xls",
-        "size": "2.00 GB",
-        "modify": "1 hour ago",
+        "name": "Polling_Station_List.xls",
+        "size": "3.20 GB",
+        "modify": "5 hours ago",
         "icon": "fa fa-file-excel-o txt-success",
         "folderclass": "fa fa-file-archive-o f-36 txt-warning",
-        "title": "Endless Admin",
-        "foldersize": "25 files, 2mb"
+        "title": "TN Election 2024",
+        "foldersize": "42 files, 3mb"
     },
     {
         "id": 4,
-        "name": "requirements.txt",
-        "size": "0.90 KB",
+        "name": "Candidate_Manifesto.txt",
+        "size": "1.20 KB",
         "modify": "1 hour ago",
         "icon": "fa fa-file-text-o txt-info",
         "folderclass": "fa fa-folder f-36 txt-warning",
-        "title": "Endless Admin",
-        "foldersize": "108 files, 5mb"
+        "title": "TN Election 2024",
+        "foldersize": "95 files, 8mb"
+    },
+    {
+        "id": 5,
+        "name": "Campaign_Schedule.pdf",
+        "size": "4.8 MB",
+        "modify": "30 minutes ago",
+        "icon": "fa fa-file-pdf-o txt-danger",
+        "folderclass": "fa fa-folder f-36 txt-warning",
+        "title": "TN Election 2024",
+        "foldersize": "78 files, 12mb"
+    },
+    {
+        "id": 6,
+        "name": "Booth_Officers_Contact.csv",
+        "size": "0.5 MB",
+        "modify": "2 hours ago",
+        "icon": "fa fa-file-excel-o txt-success",
+        "folderclass": "fa fa-file-archive-o f-36 txt-warning",
+        "title": "TN Election 2024",
+        "foldersize": "63 files, 7mb"
     }
 ]

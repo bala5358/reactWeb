@@ -103,7 +103,7 @@ const FileContent = () => {
         <CardBody className='file-manager'>
           <H4 attrH4={{ className: 'mb-3' }}>All Files</H4> <H6>Recently Opened Files</H6>
           <UL attrUL={{ className: 'simple-list files' }}> {filelist}</UL>
-          <H6 attrH6={{ className: 'mt-4' }}>Folders</H6>
+          {/* <H6 attrH6={{ className: 'mt-4' }}>Folders</H6>
           <UL attrUL={{ className: 'simple-list folder' }}>
             {myfile.map((item) => {
               return (
@@ -118,9 +118,9 @@ const FileContent = () => {
                 </LI>
               );
             })}
-          </UL>
-          <H6 attrH6={{ className: 'mt-4' }}>Files</H6>
-          <UL attrUL={{ className: 'simple-list files' }}>{filelist} </UL>
+          </UL> */}
+          {/* <H6 attrH6={{ className: 'mt-4' }}>Files</H6>
+          <UL attrUL={{ className: 'simple-list files' }}>{filelist} </UL> */}
         </CardBody>
       ) : (
         <Image attrImage={{ className: 'img-fluid m-auto', src: errorImg, alt: '' }} />

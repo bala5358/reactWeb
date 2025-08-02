@@ -11,22 +11,22 @@
         {
           "sender": 0,
           "time": "10:12 am",
-          "text": "Are we meeting today? Project has been already finished and I have results to show you."
+          "text": "இன்று நாம் சந்திக்கிறோமா? தேர்தல் பிரச்சார திட்டம் தயாராகிவிட்டது."
         },
         {
           "sender": 1,
           "time": "10:14 am",
-          "text": "Well I am not sure. The rest of the team is not here yet. Maybe in an hour or so?."
+          "text": "என்னால் உறுதியாக சொல்ல முடியவில்லை. கட்சி உறுப்பினர்கள் இன்னும் வரவில்லை. ஒரு மணி நேரத்தில் வரலாம்."
         },
         {
           "sender": 1,
           "time": "10:14 am",
-          "text": "Well I am not sure. The rest of the team."
+          "text": "வாக்காளர் பட்டியல் சரிபார்ப்பு முடிந்ததா?"
         },
         {
           "sender": 0,
           "time": "10:20 am",
-          "text": "Actually everything was fine. I'm very excited to show this to our team."
+          "text": "ஆமாம், எல்லாம் சரியாக உள்ளது. வாக்குச்சாவடி ஏற்பாடுகளை பற்றி விவாதிக்கலாம்."
         }
       ]
     },
@@ -41,27 +41,57 @@
         {
           "sender": 0,
           "time": "09:25",
-          "text": "Hello. How are you today?"
+          "text": "வணக்கம். இன்று முதல் நாள் பிரச்சாரம் எப்படி நடந்தது?"
         },
         {
           "sender": 4,
           "time": "09:29",
-          "text": "Hey! I'm fine. Thanks for asking!"
+          "text": "நல்லாக இருந்தது! மக்கள் நல்ல பதிலளித்தனர்!"
         },
         {
           "sender": 4,
           "time": "09:36",
-          "text": "Sweet! So, what do you wanna do today?"
+          "text": "இன்று எந்த பகுதிக்கு செல்லலாம் என்று திட்டமிட்டுள்ளீர்கள்?"
         },
         {
           "sender": 0,
           "time": "10:12",
-          "text": "Nah, I dunno. Play soccer.. or learn more coding perhaps?"
+          "text": "முதலில் கிராமப்புற பகுதிக்கு சென்று பிறகு நகர்ப்புற பகுதிக்கு செல்லலாம்."
         },
         {
           "sender": 4,
           "time": "10:30",
-          "text": "I am very busy at the moment."
+          "text": "இப்போது எனக்கு மிகவும் பிஸியாக இருக்கிறேன். வாக்காளர் சந்திப்பு நடக்கிறது."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "users": [
+        2,
+        3
+      ],
+      "lastMessageTime": "15:45",
+      "messages": [
+        {
+          "sender": 2,
+          "time": "14:30",
+          "text": "வாக்குச்சாவடி பொருட்கள் எல்லாம் வந்துவிட்டதா?"
+        },
+        {
+          "sender": 3,
+          "time": "14:35",
+          "text": "80% பொருட்கள் வந்துவிட்டன. மீதமுள்ளவை நாளைக்கு வரும்."
+        },
+        {
+          "sender": 2,
+          "time": "14:40",
+          "text": "தேர்தல் ஆணையத்திடம் இருந்து அனுமதி கிடைத்ததா?"
+        },
+        {
+          "sender": 3,
+          "time": "15:00",
+          "text": "ஆமாம், எல்லா அனுமதிகளும் கிடைத்துவிட்டன. நாளை முழு ஏற்பாடுகளும் முடிந்துவிடும்."
         }
       ]
     }

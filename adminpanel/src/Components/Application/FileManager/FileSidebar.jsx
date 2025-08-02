@@ -45,7 +45,7 @@ const FileSideBar = () => {
                     </LI>
                   </UL>
                   <hr />
-                  <UL attrUL={{ className: 'simple-list' }}>
+                  {/* <UL attrUL={{ className: 'simple-list' }}>
                     <LI attrLI={{ className: 'border-0' }}>
                       <div className='btn btn-outline-primary'>
                         <Grid />
@@ -70,7 +70,7 @@ const FileSideBar = () => {
                         <Image attrImage={{ className: 'bg-img', src: `${fold1}`, alt: '' }} />
                       </div>
                     </LI>
-                  </UL>
+                  </UL> */}
                 </CardBody>
               </Card>
             </div>

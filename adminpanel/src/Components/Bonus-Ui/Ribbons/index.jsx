@@ -20,7 +20,7 @@ const Ribbons = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/voters");
+        const res = await fetch("https://rthythm-backend.vercel.app/api/voters");
         const json = await res.json();
         setVoterData(Array.isArray(json) ? json : json.data || []);
       } catch (err) {

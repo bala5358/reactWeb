@@ -62,13 +62,13 @@ const Logout = () => {
           <User />
           <span>{Account} </span>
         </LI>
-        <LI
+        {/* <LI
           attrLI={{
             onClick: () => UserMenuRedirect(`/app/email-app/${layoutURL}`),
           }}>
           <Mail />
           <span>{Inbox}</span>
-        </LI>
+        </LI> */}
         <LI
           attrLI={{
             onClick: () => UserMenuRedirect(`/app/todo-app/todo/${layoutURL}`),

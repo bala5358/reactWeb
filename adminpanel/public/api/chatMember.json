@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "name": "Johan Deo",
+        "name": "ஜோஹன் தியோ",
         "thumb": "user/1.jpg",
         "status": "  Out is my favorite",
         "lastSeenDate": "0",
@@ -12,7 +12,7 @@
     },
     {
         "id": 1,
-        "name": "Vincent Porter",
+        "name": "வின்சென்ட் போர்ட்டர்",
         "thumb": "user/2.png",
         "status": "  Change for anyone.",
         "lastSeenDate": "Last seen today 15:24",
@@ -23,7 +23,7 @@
     },
     {
         "id": 2,
-        "name": "Aiden Chavez",
+        "name": "ஐடன் சாவெஸ்",
         "thumb": "user/3.png",
         "status": "  first bun like a sun.",
         "lastSeenDate": "Last seen today 13:24",
@@ -34,7 +34,7 @@
     },
     {
         "id": 3,
-        "name": "Ginger Johnston",
+        "name": "ஜிஞ்சர் ஜான்ஸ்டன்",
         "thumb": "user/6.jpg",
         "status": "  first bun like a sun.",
         "lastSeenDate": "Last seen today 22:24",
@@ -45,7 +45,7 @@
     },
     {
         "id": 4,
-        "name": "Kori Thomas",
+        "name": "கோரி தாமஸ்",
         "thumb": "user/7.jpg",
         "status": "  Change for anyone.",
         "lastSeenDate": "Last seen today 00:24",
@@ -56,7 +56,7 @@
     },
     {
         "id": 5,
-        "name": "Kori Thomas",
+        "name": "கோரி தாமஸ்",
         "thumb": "user/9.jpg",
         "status": "  Change for anyone.",
         "lastSeenDate": "Last seen yesterday 06:47",
@@ -67,7 +67,7 @@
     },
     {
         "id": 6,
-        "name": "Erica Hughes",
+        "name": "எரிகா ஹியூஸ்",
         "thumb": "user/10.jpg",
         "status": "  Change for anyone.",
         "lastSeenDate": "Last seen yesterday 20:07",
@@ -78,7 +78,7 @@
     },
     {
         "id": 7,
-        "name": "Porter Ginger",
+        "name": "போர்ட்டர் ஜிஞ்சர்",
         "thumb": "user/11.png",
         "status": "  Change for anyone.",
         "lastSeenDate": "Last seen yesterday 14:14",

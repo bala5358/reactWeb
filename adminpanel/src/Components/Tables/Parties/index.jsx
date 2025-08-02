@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Container, Row, Col, Card, CardBody } from 'reactstrap';
+import { Container, Row, Col, Card, CardBody, Button } from 'reactstrap';
 import { Breadcrumbs } from '../../../AbstractElements';
 import HeaderCard from '../../Common/Component/HeaderCard';
 import PartiesTable from './PartiesTable';
@@ -14,7 +14,9 @@ const PartiesList = () => {
           <Col sm="12">
             <Card>
               {/* <HeaderCard title="Select Multiple and Delete Single Data" /> */}
+            
               <CardBody>
+                    <Button style={{ float: "inline-end"}}>Add Parties</Button>
                 <PartiesTable />
               </CardBody>
             </Card>

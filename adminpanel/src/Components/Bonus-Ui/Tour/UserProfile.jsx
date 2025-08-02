@@ -11,9 +11,9 @@ const UserProfile = () => {
   const router = useNavigate();
   const user = useSelector((state) => state.user);
 
-  const handleEdit = () => {
-    router(`${process.env.PUBLIC_URL}/app/users/edit/Dubai`);
-  };
+  // const handleEdit = () => {
+  //   router(`${process.env.PUBLIC_URL}/app/users/edit/Dubai`);
+  // };
   const readUrl = (event) => {
     if (event.target.files.length === 0) return;
     var mimeType = event.target.files[0].type;
@@ -130,7 +130,7 @@ const UserProfile = () => {
             </div> */}
             <div className='follow' style={{justifyContent: "flex-start",
     display: "flex"}}>
-                  <Button color="secondary" className="me-1" onClick={handleEdit}>
+                  <Button color="secondary" className="me-1">
                              Edit
                             </Button>
             </div>

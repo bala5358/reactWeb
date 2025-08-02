@@ -136,18 +136,19 @@ import { HoverEffect } from '../../../Constant';
 
 
 const allItems = [
-  { label: "Volunteer Manager", icon: "fa fa-user", slug: "cadre" },
-  { label: "Voter Directory", icon: "fa fa-check-square", slug: "voter" },
-  { label: "Family Directory", icon: "fa fa-users", slug: "family" },
-  { label: "Field Survey Hub", icon: "fa fa-list-alt", slug: "survey" },
-  { label: "Booth Agent", icon: "fa fa-desktop", slug: "booth" },
-  // { label: "Birthday", icon: "fa fa-birthday-cake", slug: "birthday" },
-  // { label: "Star", icon: "fa fa-star", slug: "star" },
-  { label: "80 Above", icon: "fa fa-blind", slug: "above80" },
-  { label: "New", icon: "fa fa-child", slug: "new" },
-  { label: "Transgender", icon: "fa fa-transgender", slug: "transgender" },
-  { label: "Fatherless", icon: "fa fa-user-times", slug: "fatherless" },
-  { label: "Guardian", icon: "fa fa-shield", slug: "guardian" },
+  { label: "Volunteer Manager", icon: "fa fa-user"},
+  { label: "Voter Directory", icon: "fa fa-check-square"},
+  { label: "Family Directory", icon: "fa fa-users"},
+  { label: "Field Survey Hub", icon: "fa fa-list-alt"},
+  { label: "Booth Agent", icon: "fa fa-desktop", path:`${process.env.PUBLIC_URL}/bonus-ui/ribbons/volunteer`},
+  { label: "Birthday", icon: "fa fa-birthday-cake", path:`${process.env.PUBLIC_URL}/dashboard/default/birthday/:layout`},
+  // { label: "Star", icon: "fa fa-star", path:`${process.env.PUBLIC_URL}/bonus-ui/ribbons/volunteer`},
+  { label: "80 Above", icon: "fa fa-blind", path:`${process.env.PUBLIC_URL}/dashboard/default/above80/:layout`},
+  { label: "New", icon: "fa fa-child", path:`${process.env.PUBLIC_URL}/bonus-ui/ribbons/volunteer`},
+  { label: "Transgender", icon: "fa fa-transgender", path:`${process.env.PUBLIC_URL}/dashboard/default/transgender/:layout`},
+ 
+  { label: "Guardian", icon: "fa fa-shield", path:`${process.env.PUBLIC_URL}/bonus-ui/ribbons/volunteer`},
+ 
   // { label: "Overseas", icon: "fa fa-globe", slug: "overseas" },
 ];
 
