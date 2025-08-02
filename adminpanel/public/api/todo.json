@@ -1,0 +1,51 @@
+[
+  {
+    "id": 0,
+    "title": "Verify and update the voter list in your assigned booth.",
+    "status": "In Progress",
+    "statusCode": "primary",
+    "date": "10 Nov"
+  },
+  {
+    "id": 1,
+    "title": "Distribute campaign materials in your designated area.",
+    "status": "pending",
+    "statusCode": "danger",
+    "date": "04 Aug"
+  },
+  {
+    "id": 2,
+    "title": "Collect and submit feedback from local voters.",
+    "status": "Done",
+    "statusCode": "success",
+    "date": "25 Feb"
+  },
+  {
+    "id": 3,
+    "title": "Upload photos of campaign activities or booth setup.",
+    "status": "In Progress",
+    "statusCode": "primary",
+    "date": "15 Dec"
+  },
+  {
+    "id": 4,
+    "title": "Conduct door-to-door visits and share voter sentiments.",
+    "status": "pending",
+    "statusCode": "danger",
+    "date": "11 Nov"
+  },
+  {
+    "id": 5,
+    "title": "Monitor opposition activities in your locality.",
+    "status": "pending",
+    "statusCode": "danger",
+    "date": "04 Sept"
+  },
+  {
+    "id": 6,
+    "title": "Ensure proper distribution of voter slips before election day.",
+    "status": "Done",
+    "statusCode": "success",
+    "date": "08 July"
+  }
+]
