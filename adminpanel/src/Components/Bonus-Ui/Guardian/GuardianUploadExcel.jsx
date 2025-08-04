@@ -132,20 +132,22 @@ const GuardianUploadExcel = () => {
         .filter((item) => item.voterId);
 
       // Helper function for upload with flag
-      const uploadToServer = async (data, allowPartial = false) => {
-        const response = await fetch(
-          "https://rthythm-backend.vercel.app/api/voters/upload-voters",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ voters: data, allowPartial }),
-          }
-        );
-        const result = await response.json();
-        return { response, result };
-      };
+     const uploadToServer = async (data, allowPartial = false) => {
+  const response = await fetch(
+    `${process.env.REACT_APP_API_URL}/api/voters/upload-voters`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ voters: data, allowPartial }),
+    }
+  );
+
+  const result = await response.json();
+  return { response, result };
+};
+
 
       let { response, result } = await uploadToServer(transformedData, false);
       Swal.close();

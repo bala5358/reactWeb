@@ -24,7 +24,7 @@ const handleLogin = async (e) => {
   const payload = { email, password };
 
   try {
-    const response = await fetch('https://rthythm-backend.vercel.app/api/rhythm/login', {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/rhythm/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
@@ -36,14 +36,14 @@ const handleLogin = async (e) => {
       localStorage.setItem('token', data.token);
 
       dispatch(setUser({
-        userId: data.id, // ✅ from API response
+        userId: data.id,
         name: data.name,
         email: data.email,
         address: {
           state: data.address?.state || '',
           district: data.address?.district || '',
         },
-        image: data.image || '', // optional
+        image: data.image || '',
       }));
 
       Swal.fire({
@@ -71,6 +71,7 @@ const handleLogin = async (e) => {
     });
   }
 };
+
 
 
   return (

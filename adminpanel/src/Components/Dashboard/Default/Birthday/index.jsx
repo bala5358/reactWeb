@@ -17,19 +17,20 @@ const Birthday = () => {
   const [minAgeFilter, setMinAgeFilter] = useState("");
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch("https://rthythm-backend.vercel.app/api/voters");
-        const json = await res.json();
-        setVoterData(Array.isArray(json) ? json : json.data || []);
-      } catch (err) {
-        console.error("Failed to fetch voter data:", err);
-        setVoterData([]);
-      }
-    };
+  const fetchData = async () => {
+    try {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/voters`);
+      const json = await res.json();
+      setVoterData(Array.isArray(json) ? json : json.data || []);
+    } catch (err) {
+      console.error("Failed to fetch voter data:", err);
+      setVoterData([]);
+    }
+  };
 
-    fetchData();
-  }, []);
+  fetchData();
+}, []);
+
 
   const genderCounts = voterData.reduce(
     (acc, voter) => {

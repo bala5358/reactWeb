@@ -121,7 +121,7 @@ const RegisterFrom = ({ logoClassMain }) => {
     setSelectedDistrict('');
   };
 
- const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
 
   const payload = {
@@ -133,7 +133,7 @@ const RegisterFrom = ({ logoClassMain }) => {
   };
 
   try {
-    const response = await fetch('https://rthythm-backend.vercel.app/api/rhythm/register', {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/rhythm/register`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
@@ -142,18 +142,18 @@ const RegisterFrom = ({ logoClassMain }) => {
     const data = await response.json();
 
     if (response.ok) {
-    Swal.fire({
-    icon: 'success',
-    title: 'Registered!',
-    text: 'User registered successfully!',
-    confirmButtonText: 'Go to Dashboard',
-  }).then((result) => {
-    if (result.isConfirmed) {
-      navigate('/dashboard/Dubai'); // Change to your dashboard route
-    }
-  });
+      Swal.fire({
+        icon: 'success',
+        title: 'Registered!',
+        text: 'User registered successfully!',
+        confirmButtonText: 'Go to Dashboard',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate('/dashboard/Dubai'); // Change to your dashboard route
+        }
+      });
 
-      // Optionally clear form
+      // Clear form
       setName('');
       setEmail('');
       setPassword('');
@@ -175,6 +175,7 @@ const RegisterFrom = ({ logoClassMain }) => {
     });
   }
 };
+
 
   return (
     <Fragment>

@@ -5,7 +5,6 @@ import {
 import { Breadcrumbs, H5 } from "../../../../AbstractElements";
 import TransCommon from "./TransCommon";
 import { FaFilter } from "react-icons/fa";
-
 import TransFilterModal from "./TransFilterModal";
 
 const TransGender = () => {
@@ -16,20 +15,21 @@ const TransGender = () => {
   const [categoryFilter, setCategoryFilter] = useState("");
   const [minAgeFilter, setMinAgeFilter] = useState("");
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch("https://rthythm-backend.vercel.app/api/voters");
-        const json = await res.json();
-        setVoterData(Array.isArray(json) ? json : json.data || []);
-      } catch (err) {
-        console.error("Failed to fetch voter data:", err);
-        setVoterData([]);
-      }
-    };
+ useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/voters`);
+      const json = await res.json();
+      setVoterData(Array.isArray(json) ? json : json.data || []);
+    } catch (err) {
+      console.error("Failed to fetch voter data:", err);
+      setVoterData([]);
+    }
+  };
 
-    fetchData();
-  }, []);
+  fetchData();
+}, []);
+
 
   const genderCounts = voterData.reduce(
     (acc, voter) => {

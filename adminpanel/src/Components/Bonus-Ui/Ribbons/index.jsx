@@ -1,7 +1,17 @@
 import React, { Fragment, useState, useEffect } from "react";
 import {
-  Container, Row, Col, Card, CardHeader, Input, Button, Badge,
-  Modal, ModalHeader, ModalBody, ModalFooter
+  Container,
+  Row,
+  Col,
+  Card,
+  CardHeader,
+  Input,
+  Button,
+  Badge,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
 } from "reactstrap";
 import { Breadcrumbs, H5 } from "../../../AbstractElements";
 import RibbonComponent from "./RibbonCommon";
@@ -20,7 +30,7 @@ const Ribbons = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("https://rthythm-backend.vercel.app/api/voters");
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/api/voters`);
         const json = await res.json();
         setVoterData(Array.isArray(json) ? json : json.data || []);
       } catch (err) {
@@ -31,10 +41,11 @@ const Ribbons = () => {
 
     fetchData();
   }, []);
-    const genderCounts = voterData.reduce(
+
+  const genderCounts = voterData.reduce(
     (acc, voter) => {
-      if (voter.gender === 'Male') acc.male += 1;
-      else if (voter.gender === 'Female') acc.female += 1;
+      if (voter.gender === "Male") acc.male += 1;
+      else if (voter.gender === "Female") acc.female += 1;
       else acc.other += 1;
       return acc;
     },
@@ -42,7 +53,6 @@ const Ribbons = () => {
   );
 
   const total = voterData.length;
-
 
   const toggleModal = () => setModal(!modal);
 
@@ -54,7 +64,12 @@ const Ribbons = () => {
   };
 
   const filteredData = voterData.filter((item) => {
-    const matchesSearch = [item.name, item.relatedPerson, item.voterId, item.houseNumber]
+    const matchesSearch = [
+      item.name,
+      item.relatedPerson,
+      item.voterId,
+      item.houseNumber,
+    ]
       .join(" ")
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
@@ -74,19 +89,32 @@ const Ribbons = () => {
             <Card>
               <CardHeader>
                 <Row className="align-items-center gy-3">
-                  <Col xs="12" md="3"><H5 className="mb-0">Singanallur List</H5></Col>
+                  <Col xs="12" md="3">
+                    <H5 className="mb-0">Singanallur List</H5>
+                  </Col>
 
                   <Col xs="12" md="3">
-                    <div className="d-flex justify-content-around flex-wrap gap-2 p-2"
+                    <div
+                      className="d-flex justify-content-around flex-wrap gap-2 p-2"
                       style={{
-                        border: "1px solid #ccc", borderRadius: "10px",
-                        boxShadow: "0 2px 8px rgba(0,0,0,0.1)", backgroundColor: "#f9f9f9"
-                      }}>
-                     <Badge color="success" pill>M: {genderCounts.male}</Badge>
-                     <Badge color="danger" pill>F: {genderCounts.female}</Badge>
-                    <Badge color="secondary" pill>O: {genderCounts.other}</Badge>
-                    <Badge color="primary" pill>T: {total}</Badge>
-
+                        border: "1px solid #ccc",
+                        borderRadius: "10px",
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                        backgroundColor: "#f9f9f9",
+                      }}
+                    >
+                      <Badge color="success" pill>
+                        M: {genderCounts.male}
+                      </Badge>
+                      <Badge color="danger" pill>
+                        F: {genderCounts.female}
+                      </Badge>
+                      <Badge color="secondary" pill>
+                        O: {genderCounts.other}
+                      </Badge>
+                      <Badge color="primary" pill>
+                        T: {total}
+                      </Badge>
                     </div>
                   </Col>
 
@@ -122,7 +150,11 @@ const Ribbons = () => {
           show={modal}
           onClose={() => setModal(false)}
           onApply={handleApplyFilters}
-          initialFilters={{ gender: genderFilter, category: categoryFilter, minAge: minAgeFilter }}
+          initialFilters={{
+            gender: genderFilter,
+            category: categoryFilter,
+            minAge: minAgeFilter,
+          }}
         />
       </Container>
     </Fragment>
