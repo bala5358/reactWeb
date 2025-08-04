@@ -4,18 +4,18 @@ import Default from "../Components/Dashboard/Default";
 import Ecommerce from "../Components/Dashboard/Ecommerce";
 import OnlineCourse from "../Components/Dashboard/OnlineCourse";
 import Social from "../Components/Dashboard/Social";
-
+ 
 //settings
-
-
-
+ 
+ 
+ 
 // //widgets
 import Chart from "../Components/Widgets/Chart";
 import General from "../Components/Widgets/General";
-
+ 
 // //page-layout
 // import FooterLight from '../Components/PageLayout/FooterLight';
-
+ 
 // import FooterDark from '../Components/PageLayout/FooterDark';
 // //ui-kits
 import Typography from "../Components/UiKits/Typography";
@@ -36,7 +36,7 @@ import TabLine from "../Components/UiKits/Tabs/LineTab";
 import Navs from "../Components/UiKits/Navs";
 import Shadow from "../Components/UiKits/Shadows";
 import List from "../Components/UiKits/Lists";
-
+ 
 // //Bonus-ui
 import Scrollable from "../Components/Bonus-Ui/Scrollable";
 import TreeView from "../Components/Bonus-Ui/TreeView";
@@ -66,14 +66,14 @@ import ThemifyIcon from "../Components/Icons/ThemifyIcon";
 import IcoIcon from "../Components/Icons/IcoIcon";
 import FontawesomeIcon from "../Components/Icons/FontawesomeIcon";
 import FlagIcon from "../Components/Icons/FlagIcon";
-
+ 
 // // Buttons
 import DefaultButton from "../Components/Buttons/Default";
 import FlatButton from "../Components/Buttons/FlatBtn/index";
 import EdgeButton from "../Components/Buttons/Edge/index";
 import RaisedButton from "../Components/Buttons/RaisedBtn/index";
 import GroupButton from "../Components/Buttons/GroupBtn/index";
-
+ 
 // //chart
 import ApexCharts from "../Components/Charts/ApexCharts";
 import ChartJs from "../Components/Charts/ChartsJs";
@@ -91,56 +91,56 @@ import TypeaheadComp from "../Components/Forms/FormWidget/TypeaheadComponent/Typ
 import FormDefault from "../Components/Forms/FormLayout/Default";
 import FormWizard from "../Components/Forms/FormLayout/FormWizard1/FormWizard1";
 import BasicTables from "../Components/Tables/Reactstrap/BasicTable";
-
+ 
 import DataTables from "../Components/Tables/DataTable";
-
+ 
 // //Application
 import Newproject from "../Components/Application/Project/Newproject";
 import Project from "../Components/Application/Project/Project";
 import Chat from "../Components/Application/Chat/ChatApp";
 import VideoChat from "../Components/Application/Chat/VideoChat";
-
+ 
 import Contact from "../Components/Application/Contact/ContactApp";
 import Task from "../Components/Application/Task";
 import TodoContain from "../Components/Application/Todo";
-
+ 
 // //Gallary
 import ImageGallery from "../Components/Gallery/ImageGallery";
 import MesonryDesc from "../Components/Gallery/MesonryDesc";
 import MasonryGallery from "../Components/Gallery/MesonryGallery";
 import ImageWithDesc from "../Components/Gallery/ImageWithDesc";
 import ImageHover from "../Components/Gallery/ImageHover";
-
+ 
 // //Blog
 import BlogDetail from "../Components/Blog/BlogDetail";
 import BlogPost from "../Components/Blog/BlogPost";
 import BlogSingle from "../Components/Blog/BlogSingle";
-
+ 
 // //Pages
 import SamplePage from "../Components/Pages/Sample";
 // // import SearchPage from '../Components/Application/SearchResult'
-
+ 
 // //Book mark
 import BookmarksContain from "../Components/Application/BookMarks";
-
+ 
 // //User app
 import UsersCardssContain from "../Components/Application/Users/UsersCards";
 import UsersEditContain from "../Components/Application/Users/UsersEdit";
 import UsersProfileContain from "../Components/Application/Users/UsersProfile";
-
+ 
 // //social app
 import SocialAppContain from "../Components/Application/SocialApp";
-
+ 
 // //calender
 // import CalenderContain from '../Components/Application/Calender/Index';
-
+ 
 // //Email
 import MailInboxContain from "../Components/Application/Email/MailInbox";
-
+ 
 // //File Manager
 import FileManagerContain from "../Components/Application/FileManager";
 import SearchResultContain from "../Components/Application/SearchResult";
-
+ 
 // //E-commerce
 import Products from "../Components/Application/Ecommerce/Products";
 import ProductCart from "../Components/Application/Ecommerce/ProductCart";
@@ -153,26 +153,26 @@ import PricingMemberShip from "../Components/Application/Ecommerce/PricingMember
 import PaymentDetails from "../Components/Application/Ecommerce/PaymentDetails";
 import ProductListContain from "../Components/Application/Ecommerce/ProductList";
 import DraggableContain from "../Components/Application/Calender/DraggableCalender";
-
+ 
 // //Job Search
 import JobCards from "../Components/JobSearch/JobCardView";
 import ListView from "../Components/JobSearch/ListView";
 import JobDetails from "../Components/JobSearch/JobDetail";
 import Apply from "../Components/JobSearch/Apply";
-
+ 
 // //Learning
 import LearningList from "../Components/Learning/LearningList";
 import DetailCourse from "../Components/Learning/DetailCourse";
-
+ 
 // //Map
 import GoogleMaps from "../Components/Map/GoogleMap";
 import PigeonMap from "../Components/Map/Pigeon Map";
-
+ 
 // //Editor
 import CkEditorContain from "../Components/Editor/CkEditor";
 import MdeEDitorContain from "../Components/Editor/MDEEditor/MDEEditor";
 import ACEEditorContain from "../Components/Editor/AceCodeEditor/ACECodeEditor";
-
+ 
 import KnowledgeBaseContain from "../Components/Knowledgebase/KnowledgeBase";
 import KnowledgeCategoryContain from "../Components/Knowledgebase/KnowledgeCategory";
 import KnowledgeDetailContain from "../Components/Knowledgebase/KnowledgeDetails";
@@ -185,7 +185,6 @@ import FormTouchspinContain from "../Components/Forms/FormWidget/FormTouchspin";
 import FormClipboardContain from "../Components/Forms/FormWidget/FormClipboard";
 import FAQContent from "../Components/FAQ";
 import PollDay from "../Components/Poll-Day";
-import VoterSurveyForm from "../Components/SurveyForm";
 import AppBanner from "../Components/Settings/Appbanner";
 import UserList from "../Components/Tables/User";
 import PartiesList from "../Components/Tables/Parties";
@@ -193,7 +192,9 @@ import AgentList from "../Components/Tables/Agent";
 import Voter from "../Components/Application/Ecommerce/Voter";
 import Guardian from "../Components/Bonus-Ui/Guardian";
 import SinganallurPoll from "../Components/Bonus-Ui/SinganallurPoll";
-
+import AgentsReports from "../Components/Tables/AgentsReports";
+import { Language } from "../Constant";
+ 
 export const routes = [
   { path: `/dashboard/:layout`, Component: <Default /> },
   { path: `/dashboard/e-commerce/:layout`, Component: <Ecommerce /> },
@@ -204,7 +205,7 @@ export const routes = [
   { path: `${process.env.PUBLIC_URL}/dashboard/default/Above80/:layout`, Component: <Above80/> },
   { path: `/widgets/general/:layout`, Component: <General /> },
   { path: `/widgets/chart/:layout`, Component: <Chart /> },
-
+ 
   { path: `/ui-kits/typography/:layout`, Component: <Typography /> },
   { path: `/ui-kits/avatar/:layout`, Component: <Avatars /> },
   { path: `/ui-kits/helper-class/:layout`, Component: <HelperClasses /> },
@@ -223,7 +224,7 @@ export const routes = [
   { path: `/ui-kits/navs/:layout`, Component: <Navs /> },
   { path: `/ui-kits/shadow/:layout`, Component: <Shadow /> },
   { path: `/ui-kits/list/:layout`, Component: <List /> },
-
+ 
   { path: `/bonus-ui/scrollable/:layout`, Component: <Scrollable /> },
   { path: `/bonus-ui/tree-view/:layout`, Component: <TreeView /> },
   { path: `/bonus-ui/bootstrap-notify/:layout`, Component: <BootstrapNotify /> },
@@ -234,7 +235,7 @@ export const routes = [
   { path: `/bonus-ui/carousel/:layout`, Component: <Carousels /> },
   { path: `/guardian/:layout`, Component: <Guardian /> },
     { path: `/singanallur/:layout`, Component: <Ribbons /> },
-  
+ 
   { path: `/bonus-ui/pagination/:layout`, Component: <Paginations /> },
   { path: `/bonus-ui/steps/:layout`, Component: <Steps /> },
   { path: `/bonus-ui/breadcrumb/:layout`, Component: <BreadcrumbClass /> },
@@ -247,24 +248,24 @@ export const routes = [
   { path: `/bonus-ui/card/creativecards/:layout`, Component: <CreativeCards /> },
   { path: `/bonus-ui/card/tabcard/:layout`, Component: <TabCard /> },
   { path: `/bonus-ui/timelines/timeline1/:layout`, Component: <Timeline1 /> },
-
+ 
   { path: `/icons/flag_icons/:layout`, Component: <FlagIcon /> },
   { path: `/icons/fontawesome_icon/:layout`, Component: <FontawesomeIcon /> },
   { path: `/icons/ico_icon/:layout`, Component: <IcoIcon /> },
   { path: `/icons/themify_icons/:layout`, Component: <ThemifyIcon /> },
   { path: `/icons/feather_icons/:layout`, Component: <FeatherIcon /> },
   { path: `/icons/weather_icons/:layout`, Component: <WeatherIcon /> },
-
+ 
   { path: `/buttons/simplebutton/:layout`, Component: <DefaultButton /> },
   { path: `/buttons/flat/:layout`, Component: <FlatButton /> },
   { path: `/buttons/edge/:layout`, Component: <EdgeButton /> },
   { path: `/buttons/raised/:layout`, Component: <RaisedButton /> },
   { path: `/buttons/group/:layout`, Component: <GroupButton /> },
-
+ 
   { path: `/charts/apex/:layout`, Component: <ApexCharts /> },
   { path: `/charts/chartJs/:layout`, Component: <ChartJs /> },
   { path: `/charts/google/:layout`, Component: <GoogleCharts /> },
-
+ 
   { path: `/forms/controls/validation/:layout`, Component: <FormValidation /> },
   { path: `/forms/controls/input/:layout`, Component: <BaseInput /> },
   { path: `/forms/controls/radio-checkbox/:layout`, Component: <CheckboxandRadio /> },
@@ -278,34 +279,35 @@ export const routes = [
   { path: `/forms/widget/switch/:layout`, Component: <FormSwitchContain /> },
   { path: `/forms/widget/touchspin/:layout`, Component: <FormTouchspinContain /> },
   { path: `/forms/widget/clipboard/:layout`, Component: <FormClipboardContain /> },
-
+ 
   { path: `/forms/layout/formDefault/:layout`, Component: <FormDefault /> },
   { path: `/forms/layout/formWizard/:layout`, Component: <FormWizard /> },
-
+ 
   // //Tables
   { path: `/table/reactstraptable/basictable/:layout`, Component: <BasicTables /> },
   { path: `/table/datatable/:layout`, Component: <DataTables /> },
   { path: `/user-list/:layout`, Component: <UserList /> },
   { path: `/parties-List/:layout`, Component: <PartiesList /> },
   { path: `/agent-List/:layout`, Component: <AgentList /> },
+  { path: `/agent-reports/:layout`, Component: <AgentsReports /> },
   // //Applicatiion
   { path: `/app/project/project-list/:layout`, Component: <Project /> },
   { path: `/app/project/new-project/:layout`, Component: <Newproject /> },
   { path: `/app/chat-app/chats/:layout`, Component: <Chat /> },
   { path: `/app/chat-app/chat-video-app/:layout`, Component: <VideoChat /> },
   { path: `/app/contact-app/contacts/:layout`, Component: <Contact /> },
-
+ 
   { path: `/task/:layout`, Component: <TodoContain /> },
   { path: `/app/bookmark/:layout`, Component: <BookmarksContain /> },
   { path: `/app/todo-app/todo/:layout`, Component: <TodoContain /> },
-
+ 
   { path: `/profile/:layout`, Component: <UsersProfileContain /> },
   { path: `/app/users/edit/:layout`, Component: <UsersEditContain /> },
   { path: `/app/users/cards/:layout`, Component: <UsersCardssContain /> },
   { path: `/app/social-app/:layout`, Component: <SocialAppContain /> },
-
+ 
   { path: `/app/calendar/draggable-calendar/:layout`, Component: <DraggableContain /> },
-
+ 
   { path: `/app/email-app/:layout`, Component: <MailInboxContain /> },
   { path: `/app/file-manager/:layout`, Component: <FileManagerContain /> },
   { path: `/app/search/:layout`, Component: <SearchResultContain /> },
@@ -318,7 +320,10 @@ export const routes = [
   // Star bala
   { path: `/app/ecommerce/cart/:layout`, Component: <ProductCart /> },
     { path: `/voter/:layout`, Component: <Voter /> },
-  
+  { path: `/forms/controls/votersurveyform/:layout`, Component: <VoterSurveyForm /> },
+{ path: `/settings/appbanner/:layout`, Component: <AppBanner /> },
+  { path: `/settings/caste/:layout`, Component: <Caste /> },
+  { path: `/settings/language/:layout`, Component: <Language /> },
   // End
   { path: `/app/ecommerce/wishlist/:layout`, Component: <WishList /> },
   { path: `/app/ecommerce/checkout/:layout`, Component: <CheckOut /> },
@@ -329,29 +334,29 @@ export const routes = [
   { path: `/app/gallery/masonrys/:layout`, Component: <MasonryGallery /> },
   { path: `/app/gallery/masonrydesc/:layout`, Component: <MesonryDesc /> },
   { path: `/app/gallery/hover_effect/:layout`, Component: <ImageHover /> },
-
+ 
   // //page
   { path: `/pages/sample-page/:layout`, Component: <SamplePage /> },
-
+ 
   // //Blog
   { path: `/app/blog/blogdetails/:layout`, Component: <BlogDetail /> },
   { path: `/app/blog/blogsingle/:layout`, Component: <BlogSingle /> },
   { path: `/app/blog/blogpost/:layout`, Component: <BlogPost /> },
-
+ 
   // //Job Search
   { path: `/app/jobsearch/cardview/:layout`, Component: <JobCards /> },
   { path: `/app/jobsearch/joblist/:layout`, Component: <ListView /> },
   { path: `/app/jobsearch/jobdetail/:layout`, Component: <JobDetails /> },
   { path: `/app/jobsearch/jobapply/:layout`, Component: <Apply /> },
-
+ 
   // //Learning
   { path: `/app/learning/learninglist/:layout`, Component: <LearningList /> },
   { path: `/app/learning/learningdetail/:layout`, Component: <DetailCourse /> },
-
+ 
   // //Map
   { path: `/app/map/googlemap/:layout`, Component: <GoogleMaps /> },
   { path: `/app/map/pigeonmap/:layout`, Component: <PigeonMap /> },
-
+ 
   // //Editor
   { path: `/editor/ckeditor/:layout`, Component: <CkEditorContain /> },
   { path: `/editor/mdeeditor/:layout`, Component: <MdeEDitorContain /> },
@@ -360,13 +365,13 @@ export const routes = [
   // //Knowledge
   { path: `/app/knowledgebase/:layout`, Component: <KnowledgeBaseContain /> },
   { path: `/pollday/:layout`, Component: <PollDay /> },
-
+ 
   { path: `/app/knowledgebase-category/:layout`, Component: <KnowledgeCategoryContain /> },
   { path: `/app/knowledgebase-detail/:layout`, Component: <KnowledgeDetailContain /> },
-
+ 
   // //Support Ticket
   { path: `/app/supportticket/:layout`, Component: <SupportTickitContain /> },
-
+ 
   // //Faq
   { path: `/app/faq/:layout`, Component: <FAQContent /> },
 ];
