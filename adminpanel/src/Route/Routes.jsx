@@ -4,11 +4,7 @@ import Default from "../Components/Dashboard/Default";
 import Ecommerce from "../Components/Dashboard/Ecommerce";
 import OnlineCourse from "../Components/Dashboard/OnlineCourse";
 import Social from "../Components/Dashboard/Social";
- 
-//settings
- 
- 
- 
+
 // //widgets
 import Chart from "../Components/Widgets/Chart";
 import General from "../Components/Widgets/General";
@@ -80,6 +76,8 @@ import ChartJs from "../Components/Charts/ChartsJs";
 import GoogleCharts from "../Components/Charts/GoogleCharts";
 import Birthday from "../Components/Dashboard/Default/Birthday";
 import Above80 from "../Components/Dashboard/Default/Above80";
+import New from "../Components/Dashboard/Default/New";
+import TransGender from "../Components/Dashboard/Default/Transgender";
 // //forms
 import FormValidation from "../Components/Forms/FormControl/FormValidation";
 import BaseInput from "../Components/Forms/FormControl/BaseInput";
@@ -185,7 +183,6 @@ import FormTouchspinContain from "../Components/Forms/FormWidget/FormTouchspin";
 import FormClipboardContain from "../Components/Forms/FormWidget/FormClipboard";
 import FAQContent from "../Components/FAQ";
 import PollDay from "../Components/Poll-Day";
-import AppBanner from "../Components/Settings/Appbanner";
 import UserList from "../Components/Tables/User";
 import PartiesList from "../Components/Tables/Parties";
 import AgentList from "../Components/Tables/Agent";
@@ -194,6 +191,9 @@ import Guardian from "../Components/Bonus-Ui/Guardian";
 import SinganallurPoll from "../Components/Bonus-Ui/SinganallurPoll";
 import AgentsReports from "../Components/Tables/AgentsReports";
 import { Language } from "../Constant";
+import AppBanner from "../Components/Settings/Settings/Appbanner";
+import Caste from "../Components/Settings/Settings/Caste";
+import VoterSurveyForm from "../Components/SurveyForm";
  
 export const routes = [
   { path: `/dashboard/:layout`, Component: <Default /> },
@@ -203,6 +203,8 @@ export const routes = [
   { path: `/dashboard/social/:layout`, Component: <Social /> },
   { path: `${process.env.PUBLIC_URL}/dashboard/default/birthday/:layout`, Component: <Birthday /> },
   { path: `${process.env.PUBLIC_URL}/dashboard/default/Above80/:layout`, Component: <Above80/> },
+  { path: `${process.env.PUBLIC_URL}/dashboard/default/New/:layout`, Component: <New/> },
+  { path: `${process.env.PUBLIC_URL}/dashboard/default/Transgender/:layout`, Component: <TransGender/> },
   { path: `/widgets/general/:layout`, Component: <General /> },
   { path: `/widgets/chart/:layout`, Component: <Chart /> },
  
@@ -235,7 +237,7 @@ export const routes = [
   { path: `/bonus-ui/carousel/:layout`, Component: <Carousels /> },
   { path: `/guardian/:layout`, Component: <Guardian /> },
     { path: `/singanallur/:layout`, Component: <Ribbons /> },
- 
+
   { path: `/bonus-ui/pagination/:layout`, Component: <Paginations /> },
   { path: `/bonus-ui/steps/:layout`, Component: <Steps /> },
   { path: `/bonus-ui/breadcrumb/:layout`, Component: <BreadcrumbClass /> },
@@ -320,7 +322,7 @@ export const routes = [
   // Star bala
   { path: `/app/ecommerce/cart/:layout`, Component: <ProductCart /> },
     { path: `/voter/:layout`, Component: <Voter /> },
-  { path: `/forms/controls/votersurveyform/:layout`, Component: <VoterSurveyForm /> },
+  { path: `/forms/controls/votersurveyform/:layout`, Component: <VoterSurveyForm/> },
 { path: `/settings/appbanner/:layout`, Component: <AppBanner /> },
   { path: `/settings/caste/:layout`, Component: <Caste /> },
   { path: `/settings/language/:layout`, Component: <Language /> },

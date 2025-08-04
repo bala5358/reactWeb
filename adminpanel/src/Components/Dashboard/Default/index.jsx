@@ -140,14 +140,14 @@ const allItems = [
   { label: "Voter Directory", icon: "fa fa-check-square"},
   { label: "Family Directory", icon: "fa fa-users"},
   { label: "Field Survey Hub", icon: "fa fa-list-alt"},
-  { label: "Booth Agent", icon: "fa fa-desktop", path:`${process.env.PUBLIC_URL}/bonus-ui/ribbons/volunteer`},
+  { label: "Booth Agent", icon: "fa fa-desktop", path:`${process.env.PUBLIC_URL}/guardian/:Layout`},
   { label: "Birthday", icon: "fa fa-birthday-cake", path:`${process.env.PUBLIC_URL}/dashboard/default/birthday/:layout`},
   // { label: "Star", icon: "fa fa-star", path:`${process.env.PUBLIC_URL}/bonus-ui/ribbons/volunteer`},
   { label: "80 Above", icon: "fa fa-blind", path:`${process.env.PUBLIC_URL}/dashboard/default/above80/:layout`},
-  { label: "New", icon: "fa fa-child", path:`${process.env.PUBLIC_URL}/bonus-ui/ribbons/volunteer`},
+  { label: "New", icon: "fa fa-child", path:`${process.env.PUBLIC_URL}/dashboard/default/new/:layout`},
   { label: "Transgender", icon: "fa fa-transgender", path:`${process.env.PUBLIC_URL}/dashboard/default/transgender/:layout`},
  
-  { label: "Guardian", icon: "fa fa-shield", path:`${process.env.PUBLIC_URL}/bonus-ui/ribbons/volunteer`},
+  { label: "Guardian", icon: "fa fa-shield", path:`${process.env.PUBLIC_URL}/guardian/:Layout`},
  
   // { label: "Overseas", icon: "fa fa-globe", slug: "overseas" },
 ];
@@ -248,7 +248,7 @@ export default function Election() {
         transition: "transform 0.2s",
         cursor: "pointer",
       }}
-      onClick={() => navigate(`/manager/${item.slug}`)}
+      onClick={() => navigate(item.slug)}
       onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.03)")}
       onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
     >
@@ -295,6 +295,7 @@ export default function Election() {
           transition: "all 0.3s ease-in-out",
           cursor: "pointer",
         }}
+        onClick={()=>navigate(item.path)}
         onMouseOver={(e) => {
           e.currentTarget.style.border = "1px solid #7366FF";
           e.currentTarget.style.boxShadow = "0 4px 12px rgba(115, 102, 255, 0.25)";

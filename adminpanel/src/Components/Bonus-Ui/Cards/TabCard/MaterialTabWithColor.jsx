@@ -197,6 +197,13 @@ const MaterialTabWithColorClass = ({ selectedItem }) => {
     const [availablePrinters, setAvailablePrinters] = useState([]);
     const [selectedPrinter, setSelectedPrinter] = useState(null);
     const [isScanning, setIsScanning] = useState(false);
+    const [mobileNumber, setMobileNumber] = useState("");
+    const [whatsappNumber, setWhatsappNumber] = useState("");
+    const [dateOfBirth, setDateOfBirth] = useState("");
+    const [membershipNumber, setMembershipNumber] = useState("");
+    const [aadharNumber, setAadharNumber] = useState("");
+    const [panNumber, setPanNumber] = useState("");
+    const [remarks, setRemarks] = useState("");
     const navigate = useNavigate();
 
     const [activeTab, setActiveTab] = useState('1');
@@ -291,6 +298,45 @@ const filteredMembers = relatedMembers.filter(member => {
         }
     };
     
+const handleUpdateVoter = async () => {
+  try {
+    const payload = {
+      voterHistory: selectedOptions.map(opt => opt.value),
+      religion: selectedReligion?.value || null,
+      casteCategory: selectedCasteCategory?.value || null,
+      caste: selectedCaste?.value || null,
+      subCaste: selectedSubCaste?.value || null,
+      party: selectedParty?.value || null,
+      location: locationValue || null,
+      languages: selectedLanguages.map(opt => opt.value),
+      governmentSchemes: selectedSchemes.map(opt => opt.value),
+      feedback: selectedFeedback.map(opt => opt.value),
+      mobileNumber,
+      whatsappNumber,
+      dateOfBirth,
+      membershipNumber,
+      aadharNumber,
+      panNumber,
+      remarks,
+    };
+
+    const res = await fetch(
+      `/api/voters/${selectedItem.voterId}`, 
+      {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }
+    );
+
+    if (!res.ok) throw new Error("Failed to update voter");
+    
+    alert("Voter updated successfully!");
+  } catch (err) {
+    console.error(err);
+    alert("Update failed: " + err.message);
+  }
+};
 
     return (
         <Fragment>
@@ -647,6 +693,7 @@ const filteredMembers = relatedMembers.filter(member => {
                                                         onChange={setSelectedLanguages}
                                                         placeholder="Select Language"
                                                         isSearchable
+                                                        isMulti
                                                         classNamePrefix="react-select"
                                                         />
                                                     </FormGroup>
@@ -752,9 +799,13 @@ const filteredMembers = relatedMembers.filter(member => {
                                                 </Col>
                                             </Row>
                                         
-                                        <CardFooter className="text-end">
-                                            <Btn attrBtn={{ color: "primary", type: "submit" }} >{UpdateProfile}</Btn>
-                                        </CardFooter>
+                                       <CardFooter className="text-end">
+                                            <Btn 
+                                                attrBtn={{ color: "primary", type: "button", onClick: handleUpdateVoter }}
+                                            >
+                                                {UpdateProfile}
+                                            </Btn>
+                                            </CardFooter>
                                     </Form>
                                     </TabPane>
 
