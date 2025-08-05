@@ -37,7 +37,7 @@ const Caste = () => {
       <h1>Caste Settings</h1>
       <p>Manage religion-wise caste list with search and add functionality.</p>
 
-      {/* Religion Selector */}
+      {/* Religion Selectors */}
       <Row className="mb-3">
         <Col md={4}>
           <Label>Select Religion</Label>
