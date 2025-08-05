@@ -3,11 +3,12 @@ import {
   Container, Row, Col, Card, CardHeader, Input, Button, Badge,
 } from "reactstrap";
 import { Breadcrumbs, H5 } from "../../../../AbstractElements";
-import TransCommon from "./TransCommon";
+import NewCommon from "./NewCommon";
 import { FaFilter } from "react-icons/fa";
-import TransFilterModal from "./TransFilterModal";
 
-const Transgender = () => {
+import NewFilterModal from "./NewFilterModal";
+
+const NewVoter = () => {
   const [modal, setModal] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [voterData, setVoterData] = useState([]);
@@ -15,7 +16,7 @@ const Transgender = () => {
   const [categoryFilter, setCategoryFilter] = useState("");
   const [minAgeFilter, setMinAgeFilter] = useState("");
 
- useEffect(() => {
+  useEffect(() => {
   const fetchData = async () => {
     try {
       const res = await fetch(`${process.env.REACT_APP_API_URL}/api/voters`);
@@ -45,27 +46,29 @@ const Transgender = () => {
 
   const toggleModal = () => setModal(!modal);
 
-    const handleApplyFilters = ({ gender, category, ageRange }) => {
-      setGenderFilter(gender?.toLowerCase());
-      setCategoryFilter(category);
-      setMinAgeFilter(ageRange?.[0]);
-      setModal(false);
-    };
+  const handleApplyFilters = ({ gender, category, minAge }) => {
+    setGenderFilter(gender);
+    setCategoryFilter(category);
+    setMinAgeFilter(minAge);
+    setModal(false);
+  };
 
-  // ✅ Transgender filter: 
- const filteredData = voterData
-  .filter((item) => item.gender?.toLowerCase() === "other")
-  .filter((item) => {
-    const matchesSearch = [item.name, item.relatedPerson, item.voterId, item.houseNumber]
-      .join(" ")
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase());
+  // ✅ DOB filter: check if dob matches today's month and date
+ const filteredData = voterData.filter((item) => {
+  const matchesSearch = [item.name, item.relatedPerson, item.voterId, item.houseNumber]
+    .join(" ")
+    .toLowerCase()
+    .includes(searchTerm.toLowerCase());
 
-    const matchesAge = minAgeFilter ? item.age >= parseInt(minAgeFilter) : true;
-    const matchesCategory = categoryFilter ? item.category === categoryFilter : true;
+  const matchesGender = genderFilter ? item.gender === genderFilter : true;
+  const matchesAge = minAgeFilter ? item.age >= parseInt(minAgeFilter) : true;
 
-    return matchesSearch && matchesAge && matchesCategory;
-  });
+  // ✅ Age range filter: between 18 and 21
+  const matchesAgeRange = item.age >= 18 && item.age <= 20;
+
+  return matchesSearch && matchesGender && matchesAge && matchesAgeRange;
+});
+
   return (
     <Fragment>
       <Breadcrumbs parent="Pages" title="Guardian List" mainTitle="Voter List" />
@@ -75,7 +78,8 @@ const Transgender = () => {
             <Card>
               <CardHeader>
                 <Row className="align-items-center gy-3">
-                  <Col xs="12" md="3"><H5 className="mb-0">Transgender Voter List</H5></Col>
+                  <Col xs="12" md="3"><H5 className="mb-0">New Voters</H5></Col>
+
                   <Col xs="12" md="3">
                     <div className="d-flex justify-content-around flex-wrap gap-2 p-2"
                       style={{
@@ -111,11 +115,11 @@ const Transgender = () => {
           </Col>
 
           <Col sm="12">
-            <TransCommon data={filteredData} />
+            <NewCommon data={filteredData} />
           </Col>
         </Row>
-                      
-        <TransFilterModal
+
+        <NewFilterModal
           show={modal}
           onClose={() => setModal(false)}
           onApply={handleApplyFilters}
@@ -130,4 +134,4 @@ const Transgender = () => {
   );
 };
 
-export default Transgender;
+export default NewVoter;
