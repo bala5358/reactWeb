@@ -199,6 +199,11 @@ import CommandCenter from "../Components/Pages/constituency/command-center";
 import BoothHeatmapPage from "../Components/Pages/constituency/BoothHeatmapPage";
 import VoterCoverageTrackerPage from "../Components/Pages/constituency/VoterCoverageTrackerPage";
 import LiveSubmissionFeedPage from "../Components/Pages/constituency/LiveSubmissionFeedPage";
+import AddClusterAgents from "../Components/Admin-Panel/AddClusterAgents";
+import AddSurveyAgent from "../Components/Admin-Panel/AddSurveyAgent";
+import AddAdmin from "../Components/Admin-Panel/AddAdmin";
+import AddConstitutions from "../Components/Admin-Panel/AddConstitution";
+import AddBoothAgent from "../Components/Admin-Panel/AddBoothAgent";
  
 export const routes = [
   { path: `/dashboard/:layout`, Component: <Default /> },
@@ -330,7 +335,15 @@ export const routes = [
   { path: `/task/:layout`, Component: <TodoContain /> },
   { path: `/app/bookmark/:layout`, Component: <BookmarksContain /> },
   { path: `/app/todo-app/todo/:layout`, Component: <TodoContain /> },
- 
+ //Yuga
+
+ { path: `/add/constitution/:layout`, Component: <AddConstitutions /> },
+  { path: `/add/clusteragent/:layout`, Component: <AddClusterAgents /> },
+  { path: `/add/surveyagent/:layout`, Component: <AddSurveyAgent /> },
+  { path: `/add/boothagent/:layout`, Component: <AddBoothAgent /> },
+  { path: `/add/admin/:layout`, Component: <AddAdmin /> },
+
+
   { path: `/profile/:layout`, Component: <UsersProfileContain /> },
   { path: `/app/users/edit/:layout`, Component: <UsersEditContain /> },
   { path: `/app/users/cards/:layout`, Component: <UsersCardssContain /> },

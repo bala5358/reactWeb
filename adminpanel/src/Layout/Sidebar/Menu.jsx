@@ -1,6 +1,6 @@
 export const MENUITEMS = [
   {
-    menutitle: "Admin Panel",
+    menutitle: "Super Admin Panel",
     menucontent: "Dashboards, Tools, and Monitoring",
     Items: [
       {
@@ -66,11 +66,65 @@ export const MENUITEMS = [
         type: "sub",
         active: false,
         children: [
-          { path: `/admin/users`, title: "User & Role Assignment", type: "link" },
+          // { path: `/admin/users`, title: "User & Role Assignment", type: "link" },
           { path: `/admin/geography`, title: "Geography Hierarchy Manager", type: "link" },
           { path: `/admin/surveys`, title: "Survey Builder", type: "link" },
         ],
       },
+      {
+        title: "Role Managements",
+        icon: "settings",
+        type: "sub",
+        active: false,
+        children: [
+          { path: `/add/constitution`, title: "Constitutions", type: "link" },
+          { path: `/add/clusteragent`, title: "Cluster Agents", type: "link" },
+          { path: `/add/surveyagent`, title: "Survey Agents", type: "link" },
+          { path: `/add/boothagent`, title: "Booth Agents", type: "link" },
+          { path: `/add/admin`, title: "Admins", type: "link" },
+        ],
+      },
     ],
   },
+
+ 
+
+  {
+    menutitle: "Applications",
+    menucontent: "Ready to use Apps",
+    Items: [
+
+
+       { path: `/voter/:layout`,icon: "user",  title: "Voter", type: "link" },
+       { path: `/guardian`,icon: "user",  title: "Guardian", type: "link" },
+        { path: `/pollday`, icon: "knowledgebase", type: "link", active: true, title: "Poll" },
+     
+   
+
+    
+      { path: `/task`, icon: "task", type: "link", title: "Task" },
+    
+
+
+    ],
+  },
+ 
+  
+{
+    menutitle: "Election Team",
+    menucontent: "Elction",
+    Items: [
+      
+      { path: `/user-list`, icon: "user", title: "User-List", type: "link" },
+        { path: `/parties-List`, icon: "user", title: "Parties", type: "link" },
+      
+      { path: `/agent-List`, icon: "user", title: "Agent", type: "link" },
+ 
+    ],
+  },
+
 ];
+
+
+
+
