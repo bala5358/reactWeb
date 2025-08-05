@@ -194,11 +194,39 @@ import { Language } from "../Constant";
 import AppBanner from "../Components/Settings/Settings/Appbanner";
 import Caste from "../Components/Settings/Settings/Caste";
 import VoterSurveyForm from "../Components/SurveyForm";
+import BoothDetail from "../Components/Pages/constituency/booth-detail";
+import CommandCenter from "../Components/Pages/constituency/command-center";
+import BoothHeatmapPage from "../Components/Pages/constituency/BoothHeatmapPage";
+import VoterCoverageTrackerPage from "../Components/Pages/constituency/VoterCoverageTrackerPage";
+import LiveSubmissionFeedPage from "../Components/Pages/constituency/LiveSubmissionFeedPage";
  
 export const routes = [
   { path: `/dashboard/:layout`, Component: <Default /> },
   { path: `/dashboard/e-commerce/:layout`, Component: <Ecommerce /> },
   { path: `/dashboard/online-course/:layout`, Component: <OnlineCourse /> },
+   { path: `/command-center/constituency/:constituencyId/:layout`, Component: <CommandCenter /> },
+  { path: `/command-center/constituency/:constituencyId/booths/:boothId/:layout`, Component: <BoothDetail /> },
+  // Command Center main pages
+{ 
+  path: `/command-center/constituency/:constituencyId/heatmap/:layout`, 
+  Component: <BoothHeatmapPage /> 
+},
+{ 
+  path: `/command-center/constituency/:constituencyId/coverage-tracker/:layout`, 
+  Component: <VoterCoverageTrackerPage /> 
+},
+{ 
+  path: `/command-center/constituency/:constituencyId/live-feed/:layout`, 
+  Component: <LiveSubmissionFeedPage /> 
+},
+
+
+// // Booth Detail page
+// { 
+//   path: `/command-center/constituency/:constituencyId/booths/:boothId/:layout`, 
+//   Component: <BoothDetail /> 
+// }
+
   { path: `/dashboard/crypto/:layout`, Component: <Crypto /> },
   { path: `/dashboard/social/:layout`, Component: <Social /> },
   { path: `${process.env.PUBLIC_URL}/dashboard/default/birthday/:layout`, Component: <Birthday /> },

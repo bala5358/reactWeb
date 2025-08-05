@@ -54,9 +54,9 @@ export const MENUITEMS = [
         type: "sub",
         active: false,
         children: [
-          { path: `/constituency/heatmap`, title: "Booth-Level Heatmap", type: "link" },
-          { path: `/constituency/coverage`, title: "Voter Coverage Tracker", type: "link" },
-          { path: `/constituency/submissions`, title: "Live Submission Feed", type: "link" },
+          { path: `/command-center/constituency/:constituencyId`, title: "Booth-Level-Heatmap", type: "link" },
+          { path: `/command-center/constituency/:constituencyId/booths/:boothId`, title: "Voter-Coverage-Tracker", type: "link" },
+          { path: `/command-center/constituency/:constituencyId/live-feed`, title: "Live-Submission-Feed", type: "link" },
         ],
       },
 

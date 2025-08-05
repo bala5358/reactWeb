@@ -1,0 +1,117 @@
+/* Base Styles */
+.booth-detail-container {
+  padding: 16px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.back-button {
+  margin-bottom: 16px;
+  padding-left: 0;
+}
+
+.booth-header {
+  margin-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.location-tag {
+  margin: 0;
+}
+
+/* Stats Row */
+.stats-row {
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  height: 100%;
+}
+
+.stat-card .ant-statistic-title {
+  font-size: 0.9rem;
+}
+
+.stat-card .ant-statistic-content {
+  font-size: 1.2rem;
+}
+
+/* Content Row */
+.content-row {
+  margin-top: 24px;
+}
+
+.data-card {
+  height: 100%;
+  margin-bottom: 16px;
+}
+
+/* Turnout Timeline */
+.turnout-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.time-block {
+  margin-bottom: 16px;
+}
+
+.time-block h4 {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.turnout-value {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Table Adjustments */
+.data-card .ant-table {
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .booth-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .stat-card .ant-statistic-title {
+    font-size: 0.8rem;
+  }
+  
+  .stat-card .ant-statistic-content {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .booth-detail-container {
+    padding: 8px;
+  }
+  
+  .data-card {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .booth-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .data-card .ant-card-head-title {
+    white-space: normal;
+  }
+  
+  .time-block h4 {
+    font-size: 1rem;
+  }
+}
