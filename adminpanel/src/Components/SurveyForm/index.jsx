@@ -6,7 +6,7 @@ import HeaderCard from '../Common/Component/HeaderCard';
 import FooterCard from '../Forms/FormControl/Common/FooterCard';
 
 const VoterSurveyForm = () => {
-    // State variables
+    // State variabless
     const [party, setParty] = useState('');
     const [voteReason, setVoteReason] = useState('');
     const [qualities, setQualities] = useState([]);
