@@ -1,61 +1,76 @@
 export const MENUITEMS = [
   {
-    menutitle: "General",
-    menucontent: "Dashboards,Widgets",
+    menutitle: "Admin Panel",
+    menucontent: "Dashboards, Tools, and Monitoring",
     Items: [
-         {
+      {
         icon: "home",
-        badge: true,
+        badge: false,
         active: false,
         path: `/dashboard`,
         title: "Dashboard",
         type: "link",
       },
-     
-    {
+
+      {
         title: "Booth Agent Dashboard",
-        icon: "ecommerce",
+        icon: "user-check",
         type: "sub",
         active: false,
         children: [
-          { path: `${process.env.PUBLIC_URL}/settings/appbanner`, title: "My Booth Overview", type: "link" },
-          { path: `${process.env.PUBLIC_URL}/settings/caste`, title: "Voter Data Entry Form", type: "link" },
-          { path: `${process.env.PUBLIC_URL}/settings/language`, title: "Booth Turnout Submission", type: "link" },
-          { path: `${process.env.PUBLIC_URL}/settings/language`, title: "Field Notes", type: "link" },
+          { path: `/booth-agent/overview`, title: "My Booth Overview", type: "link" },
+          { path: `/booth-agent/voter-entry`, title: "Voter Data Entry Form", type: "link" },
+          { path: `/booth-agent/turnout`, title: "Booth Turnout Submission", type: "link" },
+          { path: `/booth-agent/notes`, title: "Field Notes / Observations", type: "link" },
         ],
       },
-       {
-        title: "Survey Agent Interferance",
-        icon: "ecommerce",
+
+      {
+        title: "Survey Agent Interface",
+        icon: "clipboard-list",
         type: "sub",
         active: false,
         children: [
-          { path: `${process.env.PUBLIC_URL}/settings/appbanner`, title: "Survey Task List", type: "link" },
-          { path: `${process.env.PUBLIC_URL}/settings/caste`, title: "Survey Response Form", type: "link" },
+          { path: `/survey-agent/tasks`, title: "Survey Task List", type: "link" },
+          { path: `/survey-agent/response`, title: "Survey Response Form", type: "link" },
         ],
       },
-       {
+
+      {
         title: "Cluster Supervisor Dashboard",
-        icon: "ecommerce",
+        icon: "users",
         type: "sub",
         active: false,
         children: [
-          { path: `${process.env.PUBLIC_URL}/settings/appbanner`, title: "Cluster Summary View", type: "link" },
-          { path: `${process.env.PUBLIC_URL}/settings/caste`, title: "Agent Performer Tracker", type: "link" },
-          { path: `${process.env.PUBLIC_URL}/settings/language`, title: "Issue Feed", type: "link" },
+          { path: `/cluster/summary`, title: "Cluster Summary View", type: "link" },
+          { path: `/cluster/performance`, title: "Agent Performance Tracker", type: "link" },
+          { path: `/cluster/issues`, title: "Issue Feed", type: "link" },
         ],
       },
-       {
+
+      {
         title: "Constituency Command Center",
-        icon: "ecommerce",
+        icon: "activity",
         type: "sub",
         active: false,
         children: [
-          { path: `${process.env.PUBLIC_URL}/settings/appbanner`, title: "Booth Level Heatmap", type: "link" },
-          { path: `${process.env.PUBLIC_URL}/settings/caste`, title: "Voter Coverage Tracker", type: "link" },
-          { path: `${process.env.PUBLIC_URL}/settings/language`, title: "Live Submission Feed", type: "link" },
+          { path: `/constituency/heatmap`, title: "Booth-Level Heatmap", type: "link" },
+          { path: `/constituency/coverage`, title: "Voter Coverage Tracker", type: "link" },
+          { path: `/constituency/submissions`, title: "Live Submission Feed", type: "link" },
         ],
       },
-    ],  
-  },  
+
+      {
+        title: "Admin Tools",
+        icon: "settings",
+        type: "sub",
+        active: false,
+        children: [
+          { path: `/admin/users`, title: "User & Role Assignment", type: "link" },
+          { path: `/admin/geography`, title: "Geography Hierarchy Manager", type: "link" },
+          { path: `/admin/surveys`, title: "Survey Builder", type: "link" },
+        ],
+      },
+    ],
+  },
 ];
