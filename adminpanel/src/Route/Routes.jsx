@@ -204,6 +204,19 @@ import AddSurveyAgent from "../Components/Admin-Panel/AddSurveyAgent";
 import AddAdmin from "../Components/Admin-Panel/AddAdmin";
 import AddConstitutions from "../Components/Admin-Panel/AddConstitution";
 import AddBoothAgent from "../Components/Admin-Panel/AddBoothAgent";
+import AllConstitutionsTable from "../Components/Admin-Panel/AddConstitution/AllConstitutionsTabel";
+import AgentPerformance from "../Components/AgentPerformance";
+import ClusterSummary from "../Components/ClusterSummary";
+import IssueFeed from "../Components/IssueFeed";
+import NewIssueForm from "../Components/IssueFeed/NewIssueForm";
+import VotersTurnout from "../Components/BoothManagement/BoothTurnout/VotersTurnout";
+import FieldNotes from "../Components/BoothManagement/BoothFieldNotes/FieldNotes";
+import VoterDataEntry from "../Components/BoothManagement/VoterData";
+import AgentManagementPage from "../Components/Pages/constituency/agent-management";
+import PartyPerformancePage from "../Components/Pages/constituency/party-performance";
+import BoothStatusPage from "../Components/Pages/constituency/booth-status";
+import AlertsPage from "../Components/Pages/constituency/alerts";
+import ReportsPage from "../Components/Pages/constituency/reports";
  
 export const routes = [
   { path: `/dashboard/:layout`, Component: <Default /> },
@@ -335,15 +348,39 @@ export const routes = [
   { path: `/task/:layout`, Component: <TodoContain /> },
   { path: `/app/bookmark/:layout`, Component: <BookmarksContain /> },
   { path: `/app/todo-app/todo/:layout`, Component: <TodoContain /> },
+
+
+
+  //jaya
+
+  { path: `/clustersummary/:layout`, Component: <ClusterSummary /> },
+{ path: `/agentperformance/:layout`, Component: <AgentPerformance /> },
+{ path: `/issuefeed/:layout`, Component: <IssueFeed /> },
+{ path: `/issuefeed/issueform/:layout`, Component: <NewIssueForm /> },
+
+//sathya
+
+{ path: `/booth-agent/voter-entry/:layout`, Component: <VoterDataEntry /> },
+  { path: `/booth-agent/voters-turnout/:layout`, Component: <VotersTurnout /> },
+  { path: `/booth-agent/field-notes/:layout`, Component: <FieldNotes /> },
+  { path: `/voter/:layout`, Component: <Voter /> },
+
  //Yuga
 
  { path: `/add/constitution/:layout`, Component: <AddConstitutions /> },
+ { path: `/add/constitution-list/:layout`, Component: <AllConstitutionsTable /> },
   { path: `/add/clusteragent/:layout`, Component: <AddClusterAgents /> },
   { path: `/add/surveyagent/:layout`, Component: <AddSurveyAgent /> },
   { path: `/add/boothagent/:layout`, Component: <AddBoothAgent /> },
   { path: `/add/admin/:layout`, Component: <AddAdmin /> },
 
+//bala
 
+{ path: `/booth-status/:layout`, Component: <BoothStatusPage /> },
+  { path: `/party-performance/:layout`, Component: <PartyPerformancePage /> },
+  { path: `/alerts/:layout`, Component: <AlertsPage /> },
+  { path: `/agent-management/:layout`, Component: <AgentManagementPage /> },
+  { path: `/reports/:layout`, Component: <ReportsPage /> },
   { path: `/profile/:layout`, Component: <UsersProfileContain /> },
   { path: `/app/users/edit/:layout`, Component: <UsersEditContain /> },
   { path: `/app/users/cards/:layout`, Component: <UsersCardssContain /> },

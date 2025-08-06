@@ -35,16 +35,49 @@ export const MENUITEMS = [
           { path: `/survey-agent/response`, title: "Survey Response Form", type: "link" },
         ],
       },
-
-      {
-        title: "Cluster Supervisor Dashboard",
-        icon: "users",
+{
+        title: "Booth Agent Dashboard",
+        icon: "user-check",
         type: "sub",
         active: false,
         children: [
-          { path: `/cluster/summary`, title: "Cluster Summary View", type: "link" },
-          { path: `/cluster/performance`, title: "Agent Performance Tracker", type: "link" },
-          { path: `/cluster/issues`, title: "Issue Feed", type: "link" },
+          {
+            path: `/booth-agent/overview`,
+            title: "My Booth Overview",
+            type: "link",
+          },
+          { path: `/voter`, icon: "user", title: "Voter List", type: "link" },
+          {
+            path: `/booth-agent/voter-entry`,
+            title: "Voter Data Entry Form",
+            type: "link",
+          },
+          {
+            path: `/booth-agent/voters-turnout`,
+            title: "Booth Turnout Submission",
+            type: "link",
+          },
+          {
+            path: `/booth-agent/field-notes`,
+            title: "Field Notes / Observations",
+            type: "link",
+          },
+         
+        ],
+      },
+      {
+        title: "Cluster Supervisor Dashboard",
+        icon: "ecommerce",
+        type: "sub",
+        active: false,
+        children: [
+          { path: `${process.env.PUBLIC_URL}/settings/appbanner`, title: "Cluster Summary View", type: "link" },
+          { path: `${process.env.PUBLIC_URL}/settings/caste`, title: "Agent Performer Tracker", type: "link" },
+          { path: `${process.env.PUBLIC_URL}/settings/language`, title: "Issue Feed", type: "link" },
+          { path: `${process.env.PUBLIC_URL}/clustersummary`, title: "Cluster Summary", type: "link" },
+          { path: `${process.env.PUBLIC_URL}/agentperformance`, title: "Agent Performance", type: "link" },
+          { path: `${process.env.PUBLIC_URL}/issuefeed`, title: "Issue Feed", type: "link" },
+          { path: `${process.env.PUBLIC_URL}/issuefeed/issueform`, title: "Issue Form", type: "link" },
         ],
       },
 
@@ -54,6 +87,13 @@ export const MENUITEMS = [
         type: "sub",
         active: false,
         children: [
+          { path: `/voter`, title: "Voter", type: "link" },
+          { path: `/booth-status`, title: "Booth Status", type: "link" },
+          { path: `/party-performance`, title: "Party Performance", type: "link" },
+         
+          { path: `/alerts`, title: "Alerts", type: "link" },
+          { path: `/agent-management`, title: "Agent Management", type: "link" },
+          { path: `/reports`, title: "Reports", type: "link" },
           { path: `/command-center/constituency/:constituencyId`, title: "Booth-Level-Heatmap", type: "link" },
           { path: `/command-center/constituency/:constituencyId/booths/:boothId`, title: "Voter-Coverage-Tracker", type: "link" },
           { path: `/command-center/constituency/:constituencyId/live-feed`, title: "Live-Submission-Feed", type: "link" },
@@ -78,6 +118,7 @@ export const MENUITEMS = [
         active: false,
         children: [
           { path: `/add/constitution`, title: "Constitutions", type: "link" },
+          { path: `/add/constitution-list`, title: "Constitutions List", type: "link" },
           { path: `/add/clusteragent`, title: "Cluster Agents", type: "link" },
           { path: `/add/surveyagent`, title: "Survey Agents", type: "link" },
           { path: `/add/boothagent`, title: "Booth Agents", type: "link" },
@@ -95,7 +136,7 @@ export const MENUITEMS = [
     Items: [
 
 
-       { path: `/voter/:layout`,icon: "user",  title: "Voter", type: "link" },
+     
        { path: `/guardian`,icon: "user",  title: "Guardian", type: "link" },
         { path: `/pollday`, icon: "knowledgebase", type: "link", active: true, title: "Poll" },
      

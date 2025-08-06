@@ -15,13 +15,6 @@ import user11 from '../../assets/images/user/10.jpg';
 import user12 from '../../assets/images/user/11.png';
 import user13 from '../../assets/images/user/12.png';
 
-// import React from 'react';
-// import { Media } from 'reactstrap';
-// import { Image } from '../../AbstractElements';
-// import user1 from '../../assets/images/user/1.jpg';
-// import user2 from '../../assets/images/user/2.png';
-
-// === Agent Data ===
 export const agenttabledata = [
   {
     id: 1,
