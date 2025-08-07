@@ -221,6 +221,20 @@ import AllSurveyAgentsTable from "../Components/Admin-Panel/AddSurveyAgent/AllSu
 import AllClusterAgentsTable from "../Components/Admin-Panel/AddClusterAgents/AllClusterAgentsTable";
 import AllBoothAgentsTable from "../Components/Admin-Panel/AddBoothAgent/AllBoothAgentsTable";
 import AllAdminListTable from "../Components/Admin-Panel/AddAdmin/AllAdminsTable";
+import BoothLevelVoterAgeFilter from "../Components/BoothManagement/BoothLevelVoterAgeFilter";
+import MyBoothOverview from "../Components/BoothManagement/MyBoothOverview";
+import BoothListTable from "../Components/ClusterSummary/BoothList";
+import AgentActivityLogs from "../Components/ClusterSummary/AgentActivityLogs";
+import DailySubmissions from "../Components/AgentPerformance/DailySubmissions";
+import CompletionPercentage from "../Components/AgentPerformance/CompletionPercentage";
+import AgentAlerts from "../Components/AgentPerformance/AgentAlerts";
+import BoothIssues from "../Components/IssueFeed/BoothIssues";
+import ResolveEscalateList from "../Components/IssueFeed/ResolveEscalateList";
+import IssueCommentsTimeline from "../Components/IssueFeed/IssueCommentsTimeline";
+import ClusterSupervisorDashboard from "../Components/ClusterSupervisor";
+import SubmissionRatesPage from "../Components/ClusterSummary/SubmissionRatesPage";
+import SurveyresponseForm from "../Components/SurveyresponseForm";
+import Tasklist from "../Components/Tasklist";
  
 export const routes = [
   { path: `/dashboard/:layout`, Component: <Default /> },
@@ -353,7 +367,10 @@ export const routes = [
   { path: `/app/bookmark/:layout`, Component: <BookmarksContain /> },
   { path: `/app/todo-app/todo/:layout`, Component: <TodoContain /> },
 
+//tharun
 
+{ path: `/survey-agent/tasks/:layout`, Component: <Tasklist /> },
+  { path: `/survey-agent/response/:layout`, Component: <SurveyresponseForm /> },
 
   //jaya
 
@@ -361,13 +378,24 @@ export const routes = [
 { path: `/agentperformance/:layout`, Component: <AgentPerformance /> },
 { path: `/issuefeed/:layout`, Component: <IssueFeed /> },
 { path: `/issuefeed/issueform/:layout`, Component: <NewIssueForm /> },
-
+{ path: `/clustersupervisor/:layout`, Component: <ClusterSupervisorDashboard /> },
+{ path: `/clustersummary/boothlist/:layout`, Component: <BoothListTable /> },
+{ path: `/clustersummary/submissionratespage/:layout`, Component: <SubmissionRatesPage /> },
+{ path: `/clustersummary/agentactivitylogs/:layout`, Component: <AgentActivityLogs /> },
+{ path: `/agentperformance/dailysubmissions/:layout`, Component: <DailySubmissions /> },
+{ path: `/agentperformance/completionpercentage/:layout`, Component: <CompletionPercentage /> },
+{ path: `/agentperformance/agentalerts/:layout`, Component: <AgentAlerts /> },
+{ path: `/issuefeed/boothissues/:layout`, Component: <BoothIssues /> },
+{ path: `/issuefeed/resolveescalatelist/:layout`, Component: <ResolveEscalateList /> },
+{ path: `/issuefeed/issuecommentstimeline/:layout`, Component: <IssueCommentsTimeline /> },
 //sathya
-
+ { path: `/booth-agent/booth-overview/:layout`, Component: <MyBoothOverview /> },
 { path: `/booth-agent/voter-entry/:layout`, Component: <VoterDataEntry /> },
   { path: `/booth-agent/voters-turnout/:layout`, Component: <VotersTurnout /> },
   { path: `/booth-agent/field-notes/:layout`, Component: <FieldNotes /> },
-  { path: `/voter/:layout`, Component: <Voter /> },
+   { path: `/booth-agent/Voter-age-filter/:layout`, Component: <BoothLevelVoterAgeFilter /> },
+  { path: `/booth-agent/voter-list/:layout`, Component: <Guardian /> },
+
 
  //Yuga
 

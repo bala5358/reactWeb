@@ -220,7 +220,7 @@ const RightSideTab = () => {
                             <Row>
                                 <Col sm="6" md="6">
                                     <FormGroup>
-                                        <Label className="form-label">Voter History</Label>
+                                        <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Voter History</Label>
                                         <Select
                                             options={voterHistoryOptions}
                                             isMulti                
@@ -228,61 +228,179 @@ const RightSideTab = () => {
                                             onChange={setSelectedOptions}
                                             placeholder="Select Voter History..."
                                             classNamePrefix="select"
+                                            style={{ fontSize: '14px' }}
                                         />
                                     </FormGroup>
                                 </Col>
                                 <Col sm="6" md="6">
+                                <FormGroup className="mb-3">
+                                    <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Voter Name</Label>
+                                    <Input
+                                    className="form-control"
+                                    type="text"
+                                    placeholder="Enter Voter's Full Name"
+                                    style={{ fontSize: '14px' }}
+                                    />
+                                </FormGroup>
+                                </Col>
+
+                                <Col sm="6" md="6">
+                                <FormGroup className="mb-3">
+                                    <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Gender</Label>
+                                    <Input
+                                    className="form-control"
+                                    type="select"
+                                    style={{ fontSize: '14px' }}
+                                    >
+                                    <option value="">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                    </Input>
+                                </FormGroup>
+                                </Col>
+
+                                <Col sm="6" md="6">
+                                <FormGroup className="mb-3">
+                                    <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Age</Label>
+                                    <Input
+                                    className="form-control"
+                                    type="number"
+                                    placeholder="Enter Age"
+                                    style={{ fontSize: '14px' }}
+                                    />
+                                </FormGroup>
+                                </Col>
+
+                                <Col sm="6" md="6">
+                                <FormGroup className="mb-3">
+                                    <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Voter ID (EPIC No)</Label>
+                                    <Input
+                                    className="form-control"
+                                    type="text"
+                                    placeholder="Enter Voter ID Number"
+                                    style={{ fontSize: '14px' }}
+                                    />
+                                </FormGroup>
+                                </Col>
+
+                                <Col sm="6" md="6">
+                                <FormGroup className="mb-3">
+                                    <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Date of Birth</Label>
+                                    <Input
+                                        className="form-control"
+                                        type="date"
+                                        placeholder="Select Date of Birth"
+                                        value={dateOfBirth}
+                                        onChange={(e) => setDateOfBirth(e.target.value)}
+                                        style={{ fontSize: '14px' }}
+                                    />
+                                </FormGroup>
+                                </Col>
+
+                                <Col md="12">
+                                <FormGroup className="mb-3">
+                                    <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Address</Label>
+                                    <Input
+                                    className="form-control"
+                                    type="textarea"
+                                    rows="2"
+                                    placeholder="Enter Full Address"
+                                    style={{ fontSize: '14px' }}
+                                    />
+                                </FormGroup>
+                                </Col>
+
+                                <Col sm="6" md="6">
+                                <FormGroup className="mb-3">
+                                    <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Booth/Part Number</Label>
+                                    <Input
+                                    className="form-control"
+                                    type="text"
+                                    placeholder="Enter Booth/Part Number"
+                                    style={{ fontSize: '14px' }}
+                                    />
+                                </FormGroup>
+                                </Col>
+
+                                <Col sm="6" md="6">
+                                <FormGroup className="mb-3">
+                                    <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Family Head Name</Label>
+                                    <Input
+                                    className="form-control"
+                                    type="text"
+                                    placeholder="Enter Family Head Name"
+                                    style={{ fontSize: '14px' }}
+                                    />
+                                </FormGroup>
+                                </Col>
+
+                                <Col sm="6" md="6">
+                                <FormGroup className="mb-3">
+                                    <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Family Members Count</Label>
+                                    <Input
+                                    className="form-control"
+                                    type="number"
+                                    placeholder="Enter Count"
+                                    style={{ fontSize: '14px' }}
+                                    />
+                                </FormGroup>
+                                </Col>
+
+                                <Col sm="6" md="6">
+                                <FormGroup className="mb-3">
+                                    <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Occupation</Label>
+                                    <Input
+                                    className="form-control"
+                                    type="text"
+                                    placeholder="Enter Occupation"
+                                    style={{ fontSize: '14px' }}
+                                    />
+                                </FormGroup>
+                                </Col>
+                               <Col sm="6" md="6">
                                     <FormGroup className="mb-3">
-                                        <Label className="form-label">Mobile Number</Label>
+                                        <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Mobile Number</Label>
                                         <Input
                                             className="form-control"
                                             type="text"
                                             placeholder="Enter Mobile Number"
                                             value={mobileNumber}
                                             onChange={(e) => setMobileNumber(e.target.value)}
+                                            style={{ fontSize: '14px' }}
                                         />
                                     </FormGroup>
                                 </Col>
                                 <Col sm="6" md="6">
                                     <FormGroup className="mb-3">
-                                        <Label className="form-label">Whatsapp Number</Label>
+                                        <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Whatsapp Number</Label>
                                         <Input
                                             className="form-control"
                                             type="text"
                                             placeholder="Enter Whatsapp Number"
                                             value={whatsappNumber}
                                             onChange={(e) => setWhatsappNumber(e.target.value)}
-                                        />
-                                    </FormGroup>
-                                </Col>
-                                <Col sm="6" md="6">
-                                    <FormGroup className="mb-3">
-                                        <Label className="form-label">Date of Birth</Label>
-                                        <Input
-                                            className="form-control"
-                                            type="date"
-                                            placeholder="Select Date of Birth"
-                                            value={dateOfBirth}
-                                            onChange={(e) => setDateOfBirth(e.target.value)}
+                                            style={{ fontSize: '14px' }}
                                         />
                                     </FormGroup>
                                 </Col>
                                 <Col sm="9" md="9">
                                     <FormGroup>
-                                        <Label className="form-label">Location</Label>
+                                        <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Location</Label>
                                         <Input
                                             className="form-control"
                                             type="text"
                                             value={locationValue}
                                             placeholder="Latitude, Longitude"
                                             onClick={() => setModalOpen(true)}
+                                            style={{ fontSize: '14px' }}
                                             readOnly
                                         />
                                     </FormGroup>
                                 </Col>
                                 <Col sm="3" md="3">
                                     <FormGroup>
-                                        <Label className="form-label invisible">Fetch</Label>
+                                        <Label className="form-label invisible" style={{ fontWeight: "500", marginBottom: "6px" }}>Fetch</Label>
                                         <Button
                                             color="primary"
                                             onClick={() => setModalOpen(true)}
@@ -298,23 +416,25 @@ const RightSideTab = () => {
                                         <Row className="g-3">
                                             <Col md="6">
                                                 <FormGroup>
-                                                    <Label>Latitude</Label>
+                                                    <Label style={{ fontWeight: "500", marginBottom: "6px" }}>Latitude</Label>
                                                     <Input
                                                         type="text"
                                                         value={latitude}
                                                         onChange={(e) => setLatitude(e.target.value)}
                                                         placeholder="Enter Latitude"
+                                                        style={{ fontSize: '14px' }}
                                                     />
                                                 </FormGroup>
                                             </Col>
                                             <Col md="6">
                                                 <FormGroup>
-                                                    <Label>Longitude</Label>
+                                                    <Label style={{ fontWeight: "500", marginBottom: "6px" }}>Longitude</Label>
                                                     <Input
                                                         type="text"
                                                         value={longitude}
                                                         onChange={(e) => setLongitude(e.target.value)}
                                                         placeholder="Enter Longitude"
+                                                        style={{ fontSize: '14px' }}
                                                     />
                                                 </FormGroup>
                                             </Col>
@@ -341,7 +461,7 @@ const RightSideTab = () => {
                                 </Modal>
                                 <Col sm="6" md="6">
                                     <FormGroup className="mb-3">
-                                        <Label className="form-label">Religion</Label>
+                                        <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Religion</Label>
                                         <Select
                                             options={religionOptions}
                                             value={selectedReligion}
@@ -349,12 +469,13 @@ const RightSideTab = () => {
                                             placeholder="Select Religion..."
                                             isSearchable
                                             classNamePrefix="react-select"
+                                            style={{ fontSize: '14px' }}
                                         />
                                     </FormGroup>
                                 </Col>    
                                 <Col sm="6" md="6">
                                     <FormGroup className="mb-3">
-                                        <Label className="form-label">Caste Category</Label>
+                                        <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Caste Category</Label>
                                         <Select
                                             options={casteCategoryOptions}
                                             value={selectedCasteCategory}
@@ -362,12 +483,13 @@ const RightSideTab = () => {
                                             placeholder="Select Caste Category..."
                                             isSearchable
                                             classNamePrefix="react-select"
+                                            style={{ fontSize: '14px' }}
                                         />
                                     </FormGroup>
                                 </Col>
                                 <Col sm="6" md="6">
                                     <FormGroup className="mb-3">
-                                        <Label className="form-label">Caste</Label>
+                                        <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Caste</Label>
                                         <Select
                                             options={casteOptions}
                                             value={selectedCaste}
@@ -375,12 +497,13 @@ const RightSideTab = () => {
                                             placeholder="Select Caste..."
                                             isSearchable
                                             classNamePrefix="react-select"
+                                            style={{ fontSize: '14px' }}
                                         />
                                     </FormGroup>
                                 </Col>
                                 <Col sm="6" md="6">
                                     <FormGroup className="mb-3">
-                                        <Label className="form-label">Sub-Caste</Label>
+                                        <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Sub-Caste</Label>
                                         <Select
                                             options={availableSubCastes}
                                             value={selectedSubCaste}
@@ -389,12 +512,13 @@ const RightSideTab = () => {
                                             isSearchable
                                             isDisabled={!selectedCaste}
                                             classNamePrefix="react-select"
+                                            style={{ fontSize: '14px' }}
                                         />
                                     </FormGroup>
                                 </Col>
                                 <Col sm="6" md="6">
                                     <FormGroup className="mb-3">
-                                        <Label className="form-label">Party</Label>
+                                        <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Party</Label>
                                         <Select
                                             options={partyOptions}
                                             value={selectedParty}
@@ -402,12 +526,13 @@ const RightSideTab = () => {
                                             placeholder="Select Party..."
                                             isSearchable
                                             classNamePrefix="react-select"
+                                            style={{ fontSize: '14px' }}
                                         />
                                     </FormGroup>
                                 </Col>
                                 <Col sm="6" md="6">
                                     <FormGroup className="mb-3">
-                                        <Label className="form-label">Category</Label>
+                                        <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Category</Label>
                                         <Select
                                             options={categoryOptions}
                                             value={selectedCategory}
@@ -415,24 +540,26 @@ const RightSideTab = () => {
                                             placeholder="Select Category..."
                                             isSearchable
                                             classNamePrefix="react-select"
+                                            style={{ fontSize: '14px' }}
                                         />
                                     </FormGroup>
                                 </Col>
                                 <Col sm="6" md="6">
                                     <FormGroup className="mb-3">
-                                        <Label className="form-label">Membership Number</Label>
+                                        <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Membership Number</Label>
                                         <Input
                                             className="form-control"
                                             type="text"
                                             placeholder="Enter Membership Number"
                                             value={membershipNumber}
                                             onChange={(e) => setMembershipNumber(e.target.value)}
+                                            style={{ fontSize: '14px' }}
                                         />
                                     </FormGroup>
                                 </Col>
                                 <Col sm="6" md="6">
                                     <FormGroup className="mb-3">
-                                        <Label className="form-label">Languages</Label>
+                                        <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Languages</Label>
                                         <Select
                                             options={languageOptions}
                                             value={selectedLanguages}
@@ -441,12 +568,13 @@ const RightSideTab = () => {
                                             isSearchable
                                             isMulti
                                             classNamePrefix="react-select"
+                                            style={{ fontSize: '14px' }}
                                         />
                                     </FormGroup>
                                 </Col>
                                 <Col md="12">
                                     <FormGroup className="mb-3">
-                                        <Label className="form-label">Government Schemes</Label>
+                                        <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Government Schemes</Label>
                                         <Select
                                             options={schemeOptions}
                                             value={selectedSchemes}
@@ -455,12 +583,13 @@ const RightSideTab = () => {
                                             isMulti
                                             isSearchable
                                             classNamePrefix="react-select"
+                                            style={{ fontSize: '14px' }}
                                         />
                                     </FormGroup>
                                 </Col>
                                 <Col md="12">
                                     <FormGroup className="mb-3">
-                                        <Label className="form-label">Feedback</Label>
+                                        <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Feedback</Label>
                                         <Select
                                             options={feedbackOptions}
                                             value={selectedFeedback}
@@ -469,36 +598,39 @@ const RightSideTab = () => {
                                             isMulti
                                             isSearchable
                                             classNamePrefix="react-select"
+                                            style={{ fontSize: '14px' }}
                                         />
                                     </FormGroup>
                                 </Col>
                                 <Col sm="6" md="6">
                                     <FormGroup className="mb-3">
-                                        <Label className="form-label">Aadhar Number</Label>
+                                        <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Aadhar Number</Label>
                                         <Input
                                             className="form-control"
                                             type="number"
                                             placeholder="Enter Aadhar Number"
                                             value={aadharNumber}
                                             onChange={(e) => setAadharNumber(e.target.value)}
+                                            style={{ fontSize: '14px' }}
                                         />
                                     </FormGroup>
                                 </Col>
                                 <Col sm="6" md="6">
                                     <FormGroup className="mb-3">
-                                        <Label className="form-label">PAN Number</Label>
+                                        <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>PAN Number</Label>
                                         <Input
                                             className="form-control"
                                             type="text"
                                             placeholder="Enter PAN Number"
                                             value={panNumber}
                                             onChange={(e) => setPanNumber(e.target.value)}
+                                            style={{ fontSize: '14px' }}
                                         />
                                     </FormGroup>
                                 </Col>
                                 <Col md="12">
                                     <FormGroup>
-                                        <Label className="form-label">Remarks</Label>
+                                        <Label className="form-label" style={{ fontWeight: "500", marginBottom: "6px" }}>Remarks</Label>
                                         <Input 
                                             type="textarea" 
                                             className="form-control" 
@@ -506,6 +638,7 @@ const RightSideTab = () => {
                                             placeholder="Enter Remarks"
                                             value={remarks}
                                             onChange={(e) => setRemarks(e.target.value)}
+                                            style={{ fontSize: '14px' }}
                                         />
                                     </FormGroup>
                                 </Col>

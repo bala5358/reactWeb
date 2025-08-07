@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { fetchIssueFeed, resolveIssue, escalateIssue } from "../../api/clusterApi";
 
@@ -46,21 +45,7 @@ const IssueFeed = () => {
                 <p className="mb-4">{issue.description}</p>
 
                 <h6>Activity</h6>
-                {/* <div className="d-flex align-items-start mb-3">
-                  <img
-                    src="/avatar1.jpg" // Replace with actual agent avatar path
-                    alt="Agent"
-                    className="rounded-circle me-2"
-                    width="36"
-                    height="36"
-                  />
-                  <div>
-                    <strong>{issue.agent}</strong> commented at {issue.created_at}
-                    <div className="bg-light border rounded p-2 mt-1">
-                      Flagged during door-to-door verification.
-                    </div>
-                  </div>
-                </div> */}
+            
 
 <div className="d-flex align-items-start mb-3">
   <div

@@ -12,16 +12,42 @@ export const MENUITEMS = [
         type: "link",
       },
 
-      {
+     {
         title: "Booth Agent Dashboard",
         icon: "user-check",
         type: "sub",
         active: false,
         children: [
-          { path: `/booth-agent/overview`, title: "My Booth Overview", type: "link" },
-          { path: `/booth-agent/voter-entry`, title: "Voter Data Entry Form", type: "link" },
-          { path: `/booth-agent/turnout`, title: "Booth Turnout Submission", type: "link" },
-          { path: `/booth-agent/notes`, title: "Field Notes / Observations", type: "link" },
+          {
+            path: `/booth-agent/booth-overview`,
+            title: "My Booth Overview",
+            type: "link",
+          },
+          { path: `/booth-agent/voter-list`,
+            icon: "user",
+            title: "Voter List",
+            type: "link" },
+          {
+            path: `/booth-agent/Voter-age-filter`,
+            title: "Voter Age Filter",
+            type: "link",
+          },
+          {
+            path: `/booth-agent/voter-entry`,
+            title: "Voter Data Entry Form",
+            type: "link",
+          },
+          {
+            path: `/booth-agent/voters-turnout`,
+            title: "Booth Turnout Submission",
+            type: "link",
+          },
+          {
+            path: `/booth-agent/field-notes`,
+            title: "Field Notes / Observations",
+            type: "link",
+          },
+         
         ],
       },
 
@@ -67,23 +93,50 @@ export const MENUITEMS = [
       },
       {
         title: "Cluster Supervisor Dashboard",
-        icon: "ecommerce",
+        icon: "others",
         type: "sub",
-        active: false,
         children: [
-          { path: `${process.env.PUBLIC_URL}/settings/appbanner`, title: "Cluster Summary View", type: "link" },
-          { path: `${process.env.PUBLIC_URL}/settings/caste`, title: "Agent Performer Tracker", type: "link" },
-          { path: `${process.env.PUBLIC_URL}/settings/language`, title: "Issue Feed", type: "link" },
-          { path: `${process.env.PUBLIC_URL}/clustersummary`, title: "Cluster Summary", type: "link" },
-          { path: `${process.env.PUBLIC_URL}/agentperformance`, title: "Agent Performance", type: "link" },
-          { path: `${process.env.PUBLIC_URL}/issuefeed`, title: "Issue Feed", type: "link" },
+          {
+            title: "Cluster Summary View",
+            type: "sub",
+            children: [
+              { path: `${process.env.PUBLIC_URL}/clustersummary/boothlist`, title: "Booth List", type: "link" },
+              { path: `${process.env.PUBLIC_URL}/clustersummary/submissionratespage`, title: "Submission Rates Page", type: "link" },
+              { path: `${process.env.PUBLIC_URL}/clustersummary/agentactivitylogs`, title: "Agent Activity Logs", type: "link" },
+             
+            ],
+          },
+          {
+            title: "Agent Performance Tracker",
+            type: "sub",
+            children: [              
+          { path: `${process.env.PUBLIC_URL}/agentperformance/dailysubmissions`, title: "Daily Submissions", type: "link" },
+          { path: `${process.env.PUBLIC_URL}/agentperformance/completionpercentage`, title: "Completion Percentage", type: "link" },
+          { path: `${process.env.PUBLIC_URL}/agentperformance/agentalerts`, title: "Agent Alerts", type: "link" },
+             
+            ],
+          },
+          {
+            title: "Issue Feed",
+            type: "sub",
+            children: [              
           { path: `${process.env.PUBLIC_URL}/issuefeed/issueform`, title: "Issue Form", type: "link" },
+          { path: `${process.env.PUBLIC_URL}/issuefeed/boothissues`, title: "Booth Issues", type: "link" },
+          { path: `${process.env.PUBLIC_URL}/issuefeed/resolveescalatelist`, title: "Resolve escalate list", type: "link" },
+          { path: `${process.env.PUBLIC_URL}/issuefeed/issuecommentstimeline`, title: "Issue Comments Timeline", type: "link" },
+ 
+         
+             
+            ],
+          },
+         
+         
         ],
       },
 
       {
         title: "Constituency Command Center",
-        icon: "activity",
+        icon: "task",
         type: "sub",
         active: false,
         children: [

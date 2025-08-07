@@ -1,34 +1,88 @@
 export const fetchClusterSummary = async () => {
   // Replace this with actual API call later
   return [
-  {
-    booth_name: "Booth 12 - Gandhi Nagar",
-    agents: [
-      { name: "Ravi Kumar" },
-      { name: "Sita Devi" }
-    ],
-    submissions: {
-      voter: 12,
-      turnout: 5,
-      survey: 3
+    {
+      booth_name: "Booth 12 - Gandhi Nagar",
+      constituency: "Gandhi Nagar",
+      agents: [
+        
+        { name: "Sita Devi" }
+      ],
+      submissions: {
+        voter: 12,
+        turnout: 5,
+        survey: 3
+      },
+      target: 30
     },
-    target: 30
-  },
-  {
-    booth_name: "Booth 15 - West Town",
-    agents: [
-      { name: "Anil" }
-    ],
-    submissions: {
-      voter: 20,
-      turnout: 8,
-      survey: 2
+    {
+      booth_name: "Booth 15 - West Town",
+      constituency: "West Zone",
+      agents: [
+        { name: "Anil" }
+      ],
+      submissions: {
+        voter: 20,
+        turnout: 8,
+        survey: 2
+      },
+      target: 40
     },
-    target: 40
-  }
-]
-
+    {
+      booth_name: "Booth 21 - South Park",
+      constituency: "South City",
+      agents: [
+        { name: "Lakshmi" }
+      ],
+      submissions: {
+        voter: 25,
+        turnout: 10,
+        survey: 5
+      },
+      target: 50
+    },
+    {
+      booth_name: "Booth 03 - North Heights",
+      constituency: "North Hills",
+      agents: [
+        { name: "Mohan" }
+      ],
+      submissions: {
+        voter: 15,
+        turnout: 4,
+        survey: 2
+      },
+      target: 35
+    },
+    {
+      booth_name: "Booth 08 - East Green",
+      constituency: "East Valley",
+      agents: [
+        { name: "Sunita" }
+      ],
+      submissions: {
+        voter: 18,
+        turnout: 6,
+        survey: 3
+      },
+      target: 40
+    },
+    {
+      booth_name: "Booth 11 - West Lake",
+      constituency: "West Zone",
+      agents: [
+        { name: "Aarti" }
+      ],
+      submissions: {
+        voter: 22,
+        turnout: 9,
+        survey: 4
+      },
+      target: 45
+    }
+  ];
 };
+
 
 
 

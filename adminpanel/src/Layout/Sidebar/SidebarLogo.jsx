@@ -3,7 +3,7 @@ import { Grid } from "react-feather";
 import { Link } from "react-router-dom";
 import CustomizerContext from "../../_helper/Customizer";
 import { Image } from "../../AbstractElements";
-import CubaIcon from "../../assets/images/login/logo.jpg";
+import CubaIcon from "../../assets/images/login/login.jpg";
 
 const SidebarLogo = () => {
   const { mixLayout, toggleSidebar, toggleIcon, layout, layoutURL } = useContext(CustomizerContext);

@@ -95,7 +95,7 @@ import { Form, FormGroup, Input, Label } from 'reactstrap';
 import { Btn, H4, P, H6, Image } from '../../../AbstractElements';
 import { Facebook, Linkedin, Twitter } from 'react-feather';
 import { Link } from 'react-router-dom';
-import logoWhite from '../../../assets/images/login/logo.jpg';
+import logoWhite from '../../../assets/images/login/login.jpg';
 import logoDark from '../../../assets/images/logo/logo_dark.png';
 import { indiaData } from '../../Common/Data/India-states-districts';
 import Swal from 'sweetalert2';

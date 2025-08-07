@@ -7,7 +7,7 @@ import { Facebook, Linkedin, Twitter } from 'react-feather';
 import Swal from 'sweetalert2';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../../redux/slices/userSlice';
-import logoWhite from '../../../assets/images/login/logo.jpg';
+import logoWhite from '../../../assets/images/login/login.jpg';
 import logoDark from '../../../assets/images/logo/logo_dark.png';
 
 const LoginForm = ({ logoClassMain }) => {
