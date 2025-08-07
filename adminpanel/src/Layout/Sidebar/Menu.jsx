@@ -100,17 +100,17 @@ export const MENUITEMS = [
         ],
       },
 
-      {
-        title: "Admin Tools",
-        icon: "settings",
-        type: "sub",
-        active: false,
-        children: [
-          // { path: `/admin/users`, title: "User & Role Assignment", type: "link" },
-          { path: `/admin/geography`, title: "Geography Hierarchy Manager", type: "link" },
-          { path: `/admin/surveys`, title: "Survey Builder", type: "link" },
-        ],
-      },
+      // {
+      //   title: "Admin Tools",
+      //   icon: "settings",
+      //   type: "sub",
+      //   active: false,
+      //   children: [
+      //     // { path: `/admin/users`, title: "User & Role Assignment", type: "link" },
+      //     // { path: `/admin/geography`, title: "Geography Hierarchy Manager", type: "link" },
+      //     // { path: `/admin/surveys`, title: "Survey Builder", type: "link" },
+      //   ],
+      // },
       {
         title: "Role Managements",
         icon: "settings",
@@ -118,11 +118,15 @@ export const MENUITEMS = [
         active: false,
         children: [
           { path: `/add/constitution`, title: "Constitutions", type: "link" },
-          { path: `/add/constitution-list`, title: "Constitutions List", type: "link" },
+          { path: `/add/constitution-list`, title: "Constitutions Agents List", type: "link" },
           { path: `/add/clusteragent`, title: "Cluster Agents", type: "link" },
+          { path: `/add/clusteragent-list`, title: "Cluster Agents List", type: "link" },
           { path: `/add/surveyagent`, title: "Survey Agents", type: "link" },
+          { path: `/add/surveyagent-list`, title: "Survey Agents List", type: "link" },
           { path: `/add/boothagent`, title: "Booth Agents", type: "link" },
+          { path: `/add/boothagent-list`, title: "Booth Agents List", type: "link" },
           { path: `/add/admin`, title: "Admins", type: "link" },
+          { path: `/add/admin-list`, title: "Admins List", type: "link" },
         ],
       },
     ],

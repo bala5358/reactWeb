@@ -1,19 +1,18 @@
-// ConstitutionList.js
-
 import React from 'react';
 import { Btn } from '../../../AbstractElements';
 
 const style2 = { width: 60, fontSize: 14, padding: 4 };
 
-// Placeholder image if none provided
 const placeholderImg = 'https://via.placeholder.com/40';
 
-export const constitutionData = [
+// 🟡 Static data (replace this with backend API response)
+export const boothAgentData = [
   {
-    name: 'John Doe',
-    constituency: 'South Chennai',
+    name: 'Ravi Kumar',
+    constituency: 'Singanallur',
     phone: '9876543210',
-    image: 'https://randomuser.me/api/portraits/men/10.jpg',
+    image: 'https://randomuser.me/api/portraits/men/20.jpg',
+    booth: '15',
     action: (
       <div>
         <Btn attrBtn={{ style: style2, color: 'success', className: 'btn btn-xs' }}>Edit</Btn>
@@ -23,36 +22,11 @@ export const constitutionData = [
     ),
   },
   {
-    name: 'Priya Raj',
-    constituency: 'Shivajinagar',
+    name: 'Meena Joshi',
+    constituency: 'Gandhipuram',
     phone: '9123456780',
-    image: 'https://randomuser.me/api/portraits/women/11.jpg',
-    action: (
-      <div>
-        <Btn attrBtn={{ style: style2, color: 'success', className: 'btn btn-xs' }}>Edit</Btn>
-        &nbsp;
-        <Btn attrBtn={{ style: style2, color: 'danger', className: 'btn btn-xs' }}>Delete</Btn>
-      </div>
-    ),
-  },
-  {
-    name: 'Suresh Kumar',
-    constituency: 'Ernakulam',
-    phone: '9988776655',
-    image: 'https://randomuser.me/api/portraits/men/12.jpg',
-    action: (
-      <div>
-        <Btn attrBtn={{ style: style2, color: 'success', className: 'btn btn-xs' }}>Edit</Btn>
-        &nbsp;
-        <Btn attrBtn={{ style: style2, color: 'danger', className: 'btn btn-xs' }}>Delete</Btn>
-      </div>
-    ),
-  },
-  {
-    name: 'Anjali Verma',
-    constituency: 'Karol Bagh',
-    phone: '9012345678',
-    image: 'https://randomuser.me/api/portraits/women/13.jpg',
+    image: 'https://randomuser.me/api/portraits/women/21.jpg',
+    booth: '32',
     action: (
       <div>
         <Btn attrBtn={{ style: style2, color: 'success', className: 'btn btn-xs' }}>Edit</Btn>
@@ -63,7 +37,7 @@ export const constitutionData = [
   },
 ];
 
-export const constitutionColumns = [
+export const boothAgentColumns = [
   {
     name: 'Profile',
     selector: (row) => row.image,
@@ -81,25 +55,28 @@ export const constitutionColumns = [
     name: 'Full Name',
     selector: (row) => row.name,
     sortable: true,
+    center: true,
     minWidth: '200px',
-        center: true,
-
   },
   {
     name: 'Constituency',
     selector: (row) => row.constituency,
     sortable: true,
+    center: true,
     minWidth: '150px',
-        center: true,
-
   },
   {
     name: 'Phone Number',
     selector: (row) => row.phone,
     sortable: true,
+    center: true,
     minWidth: '160px',
-        center: true,
-
+  },
+  {
+    name: 'Booth No.',
+    selector: (row) => row.booth,
+    center: true,
+    minWidth: '100px',
   },
   {
     name: 'Action',

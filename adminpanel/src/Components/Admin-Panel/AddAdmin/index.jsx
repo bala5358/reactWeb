@@ -2,7 +2,17 @@ import React, { Fragment, useContext } from 'react';
 import { Breadcrumbs, Btn } from '../../../AbstractElements';
 import { Add, Cancel } from '../../../Constant';
 import { useForm } from 'react-hook-form';
-import { Container, Row, Col, Card, CardBody, Form, FormGroup, Label, Input } from 'reactstrap';
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  CardBody,
+  Form,
+  FormGroup,
+  Label,
+  Input
+} from 'reactstrap';
 import { useNavigate, Link } from 'react-router-dom';
 import CustomizerContext from '../../../_helper/Customizer';
 
@@ -13,6 +23,7 @@ const AddAdmin = () => {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm();
 
@@ -24,6 +35,9 @@ const AddAdmin = () => {
     }
   };
 
+  const watchEmail = watch('email');
+  const watchPassword = watch('password');
+
   return (
     <Fragment>
       <Breadcrumbs parent="Admin" title="Add Admin User" mainTitle="Add Admin User" />
@@ -33,69 +47,107 @@ const AddAdmin = () => {
             <Card>
               <CardBody>
                 <Form className="theme-form" onSubmit={handleSubmit(onSubmit)}>
-                  <FormGroup>
-                    <Label>Name</Label>
-                    <Input
-                      type="text"
-                      {...register('name', { required: 'Name is required' })}
-                      placeholder="Enter full name"
-                    />
-                    {errors.name && <p className="text-danger">{errors.name.message}</p>}
-                  </FormGroup>
+                  <Row>
+                    {/* Name */}
+                    <Col md="6">
+                      <FormGroup>
+                        <Label>Name</Label>
+                        <Input
+                          type="text"
+                          {...register('name', { required: 'Name is required' })}
+                          placeholder="Enter full name"
+                        />
+                        {errors.name && <p className="text-danger">{errors.name.message}</p>}
+                      </FormGroup>
+                    </Col>
 
-                  <FormGroup>
-                    <Label>Email</Label>
-                    <Input
-                      type="email"
-                      {...register('email', { required: 'Email is required' })}
-                      placeholder="Enter email address"
-                    />
-                    {errors.email && <p className="text-danger">{errors.email.message}</p>}
-                  </FormGroup>
+                    {/* Email */}
+                    <Col md="6">
+                      <FormGroup>
+                        <Label>Email</Label>
+                        <Input
+                          type="email"
+                          {...register('email', { required: 'Email is required' })}
+                          placeholder="Enter email address"
+                        />
+                        {errors.email && <p className="text-danger">{errors.email.message}</p>}
+                      </FormGroup>
+                    </Col>
 
-                  <FormGroup>
-                    <Label>Phone</Label>
-                    <Input
-                      type="text"
-                      {...register('phone', { required: 'Phone number is required' })}
-                      placeholder="Enter phone number"
-                    />
-                    {errors.phone && <p className="text-danger">{errors.phone.message}</p>}
-                  </FormGroup>
+                    {/* Confirm Email */}
+                    <Col md="6">
+                      <FormGroup>
+                        <Label>Confirm Email</Label>
+                        <Input
+                          type="email"
+                          {...register('confirmEmail', {
+                            required: 'Confirm email is required',
+                            validate: value =>
+                              value === watchEmail || 'Emails do not match',
+                          })}
+                          placeholder="Re-enter email address"
+                        />
+                        {errors.confirmEmail && <p className="text-danger">{errors.confirmEmail.message}</p>}
+                      </FormGroup>
+                    </Col>
 
-                  <FormGroup>
-                    <Label>Password</Label>
-                    <Input
-                      type="password"
-                      {...register('password', { required: 'Password is required' })}
-                      placeholder="Set a secure password"
-                    />
-                    {errors.password && <p className="text-danger">{errors.password.message}</p>}
-                  </FormGroup>
+                    {/* Phone */}
+                    <Col md="6">
+                      <FormGroup>
+                        <Label>Phone</Label>
+                        <Input
+                          type="text"
+                          {...register('phone', { required: 'Phone number is required' })}
+                          placeholder="Enter phone number"
+                        />
+                        {errors.phone && <p className="text-danger">{errors.phone.message}</p>}
+                      </FormGroup>
+                    </Col>
 
-                  <FormGroup>
-                    <Label>Role</Label>
-                    <Input type="select" {...register('role', { required: 'Role is required' })}>
-                      <option value="">Select Role</option>
-                      <option value="BoothAgent">Booth Agent</option>
-                      <option value="SurveyAgent">Survey Agent</option>
-                      <option value="ClusterSupervisor">Cluster Supervisor</option>
-                      <option value="ConstituencyLead">Constituency Lead</option>
-                      <option value="Admin">Admin</option>
-                    </Input>
-                    {errors.role && <p className="text-danger">{errors.role.message}</p>}
-                  </FormGroup>
+                    {/* Alternate Phone */}
+                    <Col md="6">
+                      <FormGroup>
+                        <Label>Alternate Phone Number</Label>
+                        <Input
+                          type="text"
+                          {...register('altPhone')}
+                          placeholder="Optional alternate phone number"
+                        />
+                      </FormGroup>
+                    </Col>
 
-                  <FormGroup>
-                    <Label>Assigned Geography</Label>
-                    <Input type="select" {...register('geography')}>
-                      <option value="">Select Geography</option>
-                      <option value="booth-1">Booth 1</option>
-                      <option value="cluster-2">Cluster 2</option>
-                      {/* Dynamically load from API if needed */}
-                    </Input>
-                  </FormGroup>
+                    {/* Password */}
+                    <Col md="6">
+                      <FormGroup>
+                        <Label>Password</Label>
+                        <Input
+                          type="password"
+                          {...register('password', { required: 'Password is required' })}
+                          placeholder="Set a secure password"
+                        />
+                        {errors.password && <p className="text-danger">{errors.password.message}</p>}
+                      </FormGroup>
+                    </Col>
 
+                    {/* Confirm Password */}
+                    <Col md="6">
+                      <FormGroup>
+                        <Label>Confirm Password</Label>
+                        <Input
+                          type="password"
+                          {...register('confirmPassword', {
+                            required: 'Confirm password is required',
+                            validate: value =>
+                              value === watchPassword || 'Passwords do not match',
+                          })}
+                          placeholder="Re-enter password"
+                        />
+                        {errors.confirmPassword && <p className="text-danger">{errors.confirmPassword.message}</p>}
+                      </FormGroup>
+                    </Col>
+                  </Row>
+
+                  {/* Submit Buttons */}
                   <Row>
                     <Col className="text-end">
                       <Btn attrBtn={{ color: 'success', className: 'me-3' }}>{Add}</Btn>
@@ -104,6 +156,7 @@ const AddAdmin = () => {
                       </Link>
                     </Col>
                   </Row>
+
                 </Form>
               </CardBody>
             </Card>

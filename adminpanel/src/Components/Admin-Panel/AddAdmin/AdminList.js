@@ -1,19 +1,16 @@
-// ConstitutionList.js
-
 import React from 'react';
 import { Btn } from '../../../AbstractElements';
 
 const style2 = { width: 60, fontSize: 14, padding: 4 };
-
-// Placeholder image if none provided
 const placeholderImg = 'https://via.placeholder.com/40';
 
-export const constitutionData = [
+export const adminData = [
   {
-    name: 'John Doe',
-    constituency: 'South Chennai',
+    name: 'Admin One',
+    email: 'admin1@example.com',
     phone: '9876543210',
-    image: 'https://randomuser.me/api/portraits/men/10.jpg',
+    image: 'https://randomuser.me/api/portraits/men/30.jpg',
+    role: 'Super Admin',
     action: (
       <div>
         <Btn attrBtn={{ style: style2, color: 'success', className: 'btn btn-xs' }}>Edit</Btn>
@@ -23,36 +20,11 @@ export const constitutionData = [
     ),
   },
   {
-    name: 'Priya Raj',
-    constituency: 'Shivajinagar',
-    phone: '9123456780',
-    image: 'https://randomuser.me/api/portraits/women/11.jpg',
-    action: (
-      <div>
-        <Btn attrBtn={{ style: style2, color: 'success', className: 'btn btn-xs' }}>Edit</Btn>
-        &nbsp;
-        <Btn attrBtn={{ style: style2, color: 'danger', className: 'btn btn-xs' }}>Delete</Btn>
-      </div>
-    ),
-  },
-  {
-    name: 'Suresh Kumar',
-    constituency: 'Ernakulam',
+    name: 'Admin Two',
+    email: 'admin2@example.com',
     phone: '9988776655',
-    image: 'https://randomuser.me/api/portraits/men/12.jpg',
-    action: (
-      <div>
-        <Btn attrBtn={{ style: style2, color: 'success', className: 'btn btn-xs' }}>Edit</Btn>
-        &nbsp;
-        <Btn attrBtn={{ style: style2, color: 'danger', className: 'btn btn-xs' }}>Delete</Btn>
-      </div>
-    ),
-  },
-  {
-    name: 'Anjali Verma',
-    constituency: 'Karol Bagh',
-    phone: '9012345678',
-    image: 'https://randomuser.me/api/portraits/women/13.jpg',
+    image: 'https://randomuser.me/api/portraits/women/31.jpg',
+    role: 'Moderator',
     action: (
       <div>
         <Btn attrBtn={{ style: style2, color: 'success', className: 'btn btn-xs' }}>Edit</Btn>
@@ -63,7 +35,7 @@ export const constitutionData = [
   },
 ];
 
-export const constitutionColumns = [
+export const adminColumns = [
   {
     name: 'Profile',
     selector: (row) => row.image,
@@ -81,25 +53,28 @@ export const constitutionColumns = [
     name: 'Full Name',
     selector: (row) => row.name,
     sortable: true,
+    center: true,
     minWidth: '200px',
-        center: true,
-
   },
   {
-    name: 'Constituency',
-    selector: (row) => row.constituency,
+    name: 'Email',
+    selector: (row) => row.email,
     sortable: true,
-    minWidth: '150px',
-        center: true,
-
+    center: true,
+    minWidth: '250px',
   },
   {
     name: 'Phone Number',
     selector: (row) => row.phone,
     sortable: true,
+    center: true,
     minWidth: '160px',
-        center: true,
-
+  },
+  {
+    name: 'Role',
+    selector: (row) => row.role,
+    center: true,
+    minWidth: '150px',
   },
   {
     name: 'Action',

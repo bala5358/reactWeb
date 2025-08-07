@@ -1,39 +1,34 @@
-// AllConstitutionsTable.js
-
 import React, { Fragment } from "react";
 import { Breadcrumbs } from "../../../AbstractElements";
 import { Card, CardBody, Col, Container, Row } from "reactstrap";
 import HeaderCard from "../../Common/Component/HeaderCard";
 import DataTable from "react-data-table-component";
-import { constitutionColumns, constitutionData } from "./ConstitutionList";
+import { clusterAgentColumns, clusterAgentData } from "./ClusterAgentList";
 
-const ConstitutionListTitle = "Constitution List";
-const ConstitutionListDesc =
-  "View all constituency heads and manage their details.";
+const ClusterAgentListTitle = "Cluster Agents";
+const ClusterAgentListDesc =
+  "View all cluster agents and manage their assigned booths.";
 
-const AllConstitutionsTable = () => {
+const AllClusterAgentsTable = () => {
   return (
     <Fragment>
       <Breadcrumbs
         parent="Admin"
-        title="Constitution Agent List"
-        mainTitle="Constitution Agent List"
+        title="Cluster Agent List"
+        mainTitle="Cluster Agent List"
       />
       <Container fluid={true}>
         <Row>
           <Col sm="12">
             <Card>
-              <HeaderCard
-                title={ConstitutionListTitle}
-                span1={ConstitutionListDesc}
-              />
+              <HeaderCard title={ClusterAgentListTitle} span1={ClusterAgentListDesc} />
               <CardBody>
                 <div className="table-responsive">
                   <DataTable
                     noHeader
                     pagination
-                    columns={constitutionColumns}
-                    data={constitutionData}
+                    columns={clusterAgentColumns}
+                    data={clusterAgentData}
                     highlightOnHover
                     striped
                     responsive
@@ -52,4 +47,4 @@ const AllConstitutionsTable = () => {
   );
 };
 
-export default AllConstitutionsTable;
+export default AllClusterAgentsTable;

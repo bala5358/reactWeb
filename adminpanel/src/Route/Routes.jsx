@@ -217,6 +217,10 @@ import PartyPerformancePage from "../Components/Pages/constituency/party-perform
 import BoothStatusPage from "../Components/Pages/constituency/booth-status";
 import AlertsPage from "../Components/Pages/constituency/alerts";
 import ReportsPage from "../Components/Pages/constituency/reports";
+import AllSurveyAgentsTable from "../Components/Admin-Panel/AddSurveyAgent/AllSurveyAgentsTable";
+import AllClusterAgentsTable from "../Components/Admin-Panel/AddClusterAgents/AllClusterAgentsTable";
+import AllBoothAgentsTable from "../Components/Admin-Panel/AddBoothAgent/AllBoothAgentsTable";
+import AllAdminListTable from "../Components/Admin-Panel/AddAdmin/AllAdminsTable";
  
 export const routes = [
   { path: `/dashboard/:layout`, Component: <Default /> },
@@ -370,9 +374,13 @@ export const routes = [
  { path: `/add/constitution/:layout`, Component: <AddConstitutions /> },
  { path: `/add/constitution-list/:layout`, Component: <AllConstitutionsTable /> },
   { path: `/add/clusteragent/:layout`, Component: <AddClusterAgents /> },
+  { path: `/add/clusteragent-list/:layout`, Component: <AllClusterAgentsTable /> },
   { path: `/add/surveyagent/:layout`, Component: <AddSurveyAgent /> },
+  { path: `/add/surveyagent-list/:layout`, Component: <AllSurveyAgentsTable /> },
   { path: `/add/boothagent/:layout`, Component: <AddBoothAgent /> },
+  { path: `/add/boothagent-list/:layout`, Component: <AllBoothAgentsTable /> },
   { path: `/add/admin/:layout`, Component: <AddAdmin /> },
+  { path: `/add/admin-list/:layout`, Component: <AllAdminListTable /> },
 
 //bala
 
