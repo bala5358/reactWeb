@@ -12,6 +12,14 @@ export const MENUITEMS = [
         type: "link",
       },
       {
+        icon: "home",
+        badge: false,
+        active: false,
+        path: `/dashboard/adminpanel`,
+        title: "Admin Dashboard",
+        type: "link",
+      },
+      {
         title: "Booth Agent Dashboard",
         icon: "others",
         type: "sub",
@@ -69,35 +77,7 @@ export const MENUITEMS = [
           },
         ],
       },
-      {
-        title: "Booth Agent Dashboard",
-        icon: "others",
-        type: "sub",
-        active: false,
-        children: [
-          {
-            path: `/booth-agent/overview`,
-            title: "My Booth Overview",
-            type: "link",
-          },
-          { path: `/voter`, icon: "user", title: "Voter List", type: "link" },
-          {
-            path: `/booth-agent/voter-entry`,
-            title: "Voter Data Entry Form",
-            type: "link",
-          },
-          {
-            path: `/booth-agent/voters-turnout`,
-            title: "Booth Turnout Submission",
-            type: "link",
-          },
-          {
-            path: `/booth-agent/field-notes`,
-            title: "Field Notes / Observations",
-            type: "link",
-          },
-        ],
-      },
+
       {
         title: "Cluster Supervisor Hub",
         icon: "others",
@@ -180,6 +160,7 @@ export const MENUITEMS = [
         type: "sub",
         active: false,
         children: [
+          { path: `/constituency-dashboard`, title: "dashboard", type: "link" },
           { path: `/voter`, title: "Voter", type: "link" },
           { path: `/booth-status`, title: "Booth Status", type: "link" },
           {

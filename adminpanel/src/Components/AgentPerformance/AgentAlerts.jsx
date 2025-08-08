@@ -6,8 +6,18 @@ import {
   Col,
   Table,
   Input,
-  Badge
+  Badge,
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Form,
+  FormGroup,
+  Label,
+  Textarea
 } from 'reactstrap';
+
 import { H3 } from '../../AbstractElements';
 import dayjs from 'dayjs';
 
@@ -84,6 +94,24 @@ const AgentAlerts = () => {
     return dayjs().diff(dayjs(dateStr), 'day');
   };
 
+  const [modalOpen, setModalOpen] = useState(false);
+const [selectedAgent, setSelectedAgent] = useState(null);
+const [commentText, setCommentText] = useState('');
+
+
+const openCommentModal = (agent) => {
+  setSelectedAgent(agent);
+  setCommentText('');
+  setModalOpen(true);
+};
+
+const handleCommentSubmit = () => {
+  alert(`Comment for ${selectedAgent.agent_name}: ${commentText}`);
+  // Optionally: Send to backend
+  setModalOpen(false);
+};
+
+
   const getAlerts = (item) => {
     const total = getTotal(item.submissions);
     const pct = getPercentage(item.submissions, item.assigned_target);
@@ -127,58 +155,108 @@ const AgentAlerts = () => {
           <div className="table-responsive">
             <Table className="table-hover align-middle">
               <thead className="table-light">
-                <tr>
-                  <th>#</th>
-                  <th>Agent</th>
-                  <th>Constituency</th>
-                  <th>Last Submission</th>
-                  <th>Target</th>
-                  <th>Total</th>
-                  <th>Completion %</th>
-                  <th>Alerts</th>
-                </tr>
-              </thead>
-              <tbody>
-                {filtered.length === 0 ? (
-                  <tr>
-                    <td colSpan="8" className="text-center text-muted">
-                      No records found.
-                    </td>
-                  </tr>
-                ) : (
-                  filtered.map((item, idx) => {
-                    const total = getTotal(item.submissions);
-                    const pct = getPercentage(item.submissions, item.assigned_target);
-                    const alertTags = getAlerts(item);
+  <tr>
+    <th>#</th>
+    <th>Agent</th>
+    <th>Constituency</th>
+    <th>Last Submission</th>
+    <th>Target</th>
+    <th>Total</th>
+    <th>Completion %</th>
+    <th>Alerts</th>
+    <th>Actions</th> {/* New column */}
+  </tr>
+</thead>
 
-                    return (
-                      <tr key={idx}>
-                        <th scope="row">{idx + 1}</th>
-                        <td>{item.agent_name}</td>
-                        <td>{item.constituency}</td>
-                        <td>{item.last_submission_date}</td>
-                        <td>{item.assigned_target}</td>
-                        <td>{total}</td>
-                        <td>{pct}%</td>
-                        <td>
-                          {alertTags.length === 0 ? (
-                            <Badge color="success">✅ OK</Badge>
-                          ) : (
-                            alertTags.map((tag, i) => (
-                              <Badge color="danger" className="me-1" key={i}>
-                                {tag}
-                              </Badge>
-                            ))
-                          )}
-                        </td>
-                      </tr>
-                    );
-                  })
-                )}
-              </tbody>
+<tbody>
+  {filtered.length === 0 ? (
+    <tr>
+      <td colSpan="9" className="text-center text-muted">
+        No records found.
+      </td>
+    </tr>
+  ) : (
+    filtered.map((item, idx) => {
+      const total = getTotal(item.submissions);
+      const pct = getPercentage(item.submissions, item.assigned_target);
+      const alertTags = getAlerts(item);
+
+      return (
+        <tr key={idx}>
+          <th scope="row">{idx + 1}</th>
+          <td>{item.agent_name}</td>
+          <td>{item.constituency}</td>
+          <td>{item.last_submission_date}</td>
+          <td>{item.assigned_target}</td>
+          <td>{total}</td>
+          <td>{pct}%</td>
+          <td>
+            {alertTags.length === 0 ? (
+              <Badge color="success">✅ OK</Badge>
+            ) : (
+              alertTags.map((tag, i) => (
+                <Badge color="danger" className="me-1" key={i}>
+                  {tag}
+                </Badge>
+              ))
+            )}
+          </td>
+          <td>
+            {/* Action buttons */}
+            <div className="d-flex gap-1">
+              <button
+                className="btn btn-sm btn-outline-warning"
+                onClick={() => alert(`Reminder sent to ${item.agent_name}`)}
+              >
+                🔔 Reminder
+              </button>
+              <button
+  className="btn btn-sm btn-outline-primary"
+  onClick={() => openCommentModal(item)}
+>
+  📝 Note
+</button>
+
+            </div>
+          </td>
+        </tr>
+      );
+    })
+  )}
+</tbody>
             </Table>
           </div>
         </CardBody>
+
+        <Modal isOpen={modalOpen} toggle={() => setModalOpen(!modalOpen)}>
+  <ModalHeader toggle={() => setModalOpen(!modalOpen)}>
+    Add Comment for {selectedAgent?.agent_name}
+  </ModalHeader>
+  <ModalBody>
+    <Form>
+      <FormGroup>
+        <Label for="commentText">Comment</Label>
+        <Input
+          id="commentText"
+          type="textarea"
+          value={commentText}
+          onChange={(e) => setCommentText(e.target.value)}
+          rows="4"
+          placeholder="Type your comment here..."
+        />
+      </FormGroup>
+    </Form>
+  </ModalBody>
+  <ModalFooter>
+    <Button color="primary" onClick={handleCommentSubmit}>
+      Submit
+    </Button>
+    <Button color="secondary" onClick={() => setModalOpen(false)}>
+      Cancel
+    </Button>
+  </ModalFooter>
+</Modal>
+
       </Card>
     </Col>
   );

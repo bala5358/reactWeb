@@ -235,6 +235,7 @@ import ClusterSupervisorDashboard from "../Components/ClusterSupervisor";
 import SubmissionRatesPage from "../Components/ClusterSummary/SubmissionRatesPage";
 import SurveyresponseForm from "../Components/SurveyresponseForm";
 import Tasklist from "../Components/Tasklist";
+import AdminPanelDashboard from "../Components/Dashboard/AdminPanelDashboard";
  
 export const routes = [
   { path: `/dashboard/:layout`, Component: <Default /> },
@@ -264,7 +265,7 @@ export const routes = [
 // }
 
   { path: `/dashboard/crypto/:layout`, Component: <Crypto /> },
-  { path: `/dashboard/social/:layout`, Component: <Social /> },
+  { path: `/dashboard/adminpanel/:layout`, Component: <AdminPanelDashboard /> },
   { path: `${process.env.PUBLIC_URL}/dashboard/default/birthday/:layout`, Component: <Birthday /> },
   { path: `${process.env.PUBLIC_URL}/dashboard/default/Above80/:layout`, Component: <Above80/> },
   { path: `${process.env.PUBLIC_URL}/dashboard/default/New/:layout`, Component: <New/> },
@@ -411,7 +412,7 @@ export const routes = [
   { path: `/add/admin-list/:layout`, Component: <AllAdminListTable /> },
 
 //bala
-
+{ path: `/constituency-dashboard/:layout`, Component: <ConstituencyDashboard /> },
 { path: `/booth-status/:layout`, Component: <BoothStatusPage /> },
   { path: `/party-performance/:layout`, Component: <PartyPerformancePage /> },
   { path: `/alerts/:layout`, Component: <AlertsPage /> },

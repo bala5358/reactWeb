@@ -1,12 +1,16 @@
 import React, { useState } from "react";
-import { submitNewIssue } from "../../api/clusterApi"; // Create this function in your API file
+import { submitNewIssue } from "../../api/clusterApi";
 
 const NewIssueForm = () => {
   const [formData, setFormData] = useState({
     issue_type: "",
     booth_name: "",
+    constituency: "",
     agent: "",
+    reported_by: "",
+    priority: "Medium",
     description: "",
+    initial_comment: "",
     media_file: null,
   });
 
@@ -37,8 +41,12 @@ const NewIssueForm = () => {
       setFormData({
         issue_type: "",
         booth_name: "",
+        constituency: "",
         agent: "",
+        reported_by: "",
+        priority: "Medium",
         description: "",
+        initial_comment: "",
         media_file: null,
       });
     } catch (err) {
@@ -84,6 +92,18 @@ const NewIssueForm = () => {
         </div>
 
         <div className="mb-3">
+          <label className="form-label">Constituency</label>
+          <input
+            type="text"
+            name="constituency"
+            className="form-control"
+            value={formData.constituency}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="mb-3">
           <label className="form-label">Agent Name</label>
           <input
             type="text"
@@ -96,6 +116,34 @@ const NewIssueForm = () => {
         </div>
 
         <div className="mb-3">
+          <label className="form-label">Reported By</label>
+          <input
+            type="text"
+            name="reported_by"
+            className="form-control"
+            value={formData.reported_by}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="mb-3">
+          <label className="form-label">Priority</label>
+          <select
+            name="priority"
+            className="form-select"
+            value={formData.priority}
+            onChange={handleChange}
+            required
+          >
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            <option value="Urgent">Urgent</option>
+          </select>
+        </div>
+
+        <div className="mb-3">
           <label className="form-label">Description</label>
           <textarea
             name="description"
@@ -104,6 +152,17 @@ const NewIssueForm = () => {
             value={formData.description}
             onChange={handleChange}
             required
+          ></textarea>
+        </div>
+
+        <div className="mb-3">
+          <label className="form-label">Initial Comment</label>
+          <textarea
+            name="initial_comment"
+            className="form-control"
+            rows={2}
+            value={formData.initial_comment}
+            onChange={handleChange}
           ></textarea>
         </div>
 

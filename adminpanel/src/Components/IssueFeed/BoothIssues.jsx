@@ -1,6 +1,17 @@
 import React, { useEffect, useState, Fragment } from 'react';
-import { Card, CardBody, Col, Media, Input, Label, FormGroup, Row, Badge } from 'reactstrap';
-import { H5, P } from '../../AbstractElements'; // Adjust path if needed
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  Col,
+  Media,
+  Input,
+  Label,
+  FormGroup,
+  Row,
+  Badge
+} from 'reactstrap';
+import { H5, P } from '../../AbstractElements'; // Adjust if needed
 
 const fetchBoothIssues = async () => {
   return [
@@ -58,49 +69,53 @@ const BoothIssues = () => {
 
   return (
     <Fragment>
-      {/* Filter Dropdown */}
-      <FormGroup row className="mb-4">
-        <Label for="constituency" sm={2} className="fw-bold">Filter by Constituency:</Label>
-        <Col sm={4}>
-          <Input
-            type="select"
-            id="constituency"
-            value={selectedConstituency}
-            onChange={(e) => setSelectedConstituency(e.target.value)}
-          >
-            {constituencies.map((c, idx) => (
-              <option key={idx} value={c}>{c}</option>
-            ))}
-          </Input>
-        </Col>
-      </FormGroup>
+      <Card className="shadow-sm">
+        <CardHeader className="d-flex justify-content-between align-items-center">
+          <H5 className="mb-0">📋 Booth Issues</H5>
+          <FormGroup className="d-flex align-items-center mb-0">
+            <Label for="constituency" className="me-2 fw-bold mb-0">Constituency:</Label>
+            <Input
+              type="select"
+              id="constituency"
+              bsSize="sm"
+              value={selectedConstituency}
+              onChange={(e) => setSelectedConstituency(e.target.value)}
+            >
+              {constituencies.map((c, idx) => (
+                <option key={idx} value={c}>{c}</option>
+              ))}
+            </Input>
+          </FormGroup>
+        </CardHeader>
 
-      {/* Cards Grid (Articals style) */}
-      <Row className="g-4">
-        {filtered.map((item, i) => (
-          <Col xl="4" sm="6" className="box-col-6" key={item.id}>
-            <Card className="bg-primary text-white">
-              <CardBody>
-                <Media className="faq-widgets">
-                  <Media body>
-                    <H5 className="text-white">{item.booth}</H5>
-                    <P className="text-white">{item.issue}</P>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <small>{item.date}</small>
-                      <Badge color={item.status === 'Resolved' ? 'light' : 'warning'}>
-                        {item.status}
-                      </Badge>
-                    </div>
-                  </Media>
-                  <div className="ms-3 fs-4">
-                    <i className={`fa ${item.status === 'Resolved' ? 'fa-check-circle' : 'fa-exclamation-circle'} text-white`}></i>
-                  </div>
-                </Media>
-              </CardBody>
-            </Card>
-          </Col>
-        ))}
-      </Row>
+        <CardBody>
+          <Row className="g-4">
+            {filtered.map((item) => (
+              <Col xl="4" sm="6" className="box-col-6" key={item.id}>
+                <Card className="bg-primary text-white">
+                  <CardBody>
+                    <Media className="faq-widgets">
+                      <Media body>
+                        <H5 className="text-white" style={{ fontSize: "16px" }}>{item.booth}</H5>
+                        <P className="text-white">{item.issue}</P>
+                        <div className="d-flex justify-content-between align-items-center">
+                          <small>{item.date}</small>
+                          <Badge color={item.status === 'Resolved' ? 'success' : 'warning'}>
+                            {item.status}
+                          </Badge>
+                        </div>
+                      </Media>
+                      <div className="ms-3 fs-4">
+                        <i className={`fa ${item.status === 'Resolved' ? 'fa-check-circle' : 'fa-exclamation-circle'} text-white`}></i>
+                      </div>
+                    </Media>
+                  </CardBody>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </CardBody>
+      </Card>
     </Fragment>
   );
 };

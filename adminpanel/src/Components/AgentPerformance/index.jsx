@@ -1,3 +1,72 @@
+// import React, { useEffect, useState } from "react";
+// import { fetchAgentPerformance } from "../../api/clusterApi";
+
+// const AgentPerformance = () => {
+//   const [agents, setAgents] = useState([]);
+
+//   useEffect(() => {
+//     const getData = async () => {
+//       const res = await fetchAgentPerformance(); // mock/fake API
+//       setAgents(res);
+//     };
+//     getData();
+//   }, []);
+
+//   const getColor = (pct) => {
+//     if (pct >= 90) return "success";
+//     if (pct >= 60) return "warning";
+//     return "danger";
+//   };
+
+//   return (
+//     <div className="container my-4">
+//       <h2 className="mb-4">🧑‍💼 Agent Performance Tracker</h2>
+
+//       {agents.length === 0 ? (
+//         <p>Loading agents...</p>
+//       ) : (
+//         agents.map((agent) => (
+//           <div className="card mb-4 shadow-sm" key={agent.agent_id}>
+//             <div className="card-body">
+//               <h5 className="card-title">{agent.name}</h5>
+//               <p className="mb-2">
+//                 📍 <strong>Booth:</strong> {agent.booth_name}
+//               </p>
+
+//               <div className="mb-2">
+//                 📝 <strong>Submissions Today:</strong> {agent.submissions_today}
+//               </div>
+
+//               <div className="mb-2">
+//                 🎯 <strong>Target:</strong> {agent.daily_target}
+//               </div>
+
+//               <div className="progress mb-2">
+//                 <div
+//                   className={`progress-bar bg-${getColor(agent.completion_pct)}`}
+//                   style={{ width: `${agent.completion_pct}%` }}
+//                 >
+//                   {agent.completion_pct}%
+//                 </div>
+//               </div>
+
+//               {agent.alert && (
+//                 <div className="alert alert-danger p-2 mt-2">
+//                   ⚠️ {agent.alert}
+//                 </div>
+//               )}
+//             </div>
+//           </div>
+//         ))
+//       )}
+//     </div>
+//   );
+// };
+
+// export default AgentPerformance;
+
+
+
 import React, { useEffect, useState } from "react";
 import { fetchAgentPerformance } from "../../api/clusterApi";
 

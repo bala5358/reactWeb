@@ -13,7 +13,7 @@ import {
 import { H3 } from '../../AbstractElements';
 import { fetchClusterSummary } from '../../api/clusterApi';
 
-const SubmissionRatesPage= () => {
+const SubmissionRatesTable = () => {
   const [booths, setBooths] = useState([]);
   const [filteredBooths, setFilteredBooths] = useState([]);
   const [viewMode, setViewMode] = useState('table'); // table | card
@@ -210,4 +210,4 @@ const SubmissionRatesPage= () => {
   );
 };
 
-export default SubmissionRatesPage;
+export default SubmissionRatesTable;
