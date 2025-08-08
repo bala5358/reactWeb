@@ -107,7 +107,7 @@ const ClusterSupervisorDashboard = () => {
         <Col md={12}>
           <Card>
             <CardHeader>
-              <H3>🧾 Recent Booth Activity</H3>
+              <H3>Recent Booth Activity</H3>
             </CardHeader>
             <CardBody>
               <Table className="table-hover align-middle">
