@@ -11,14 +11,14 @@ export const MENUITEMS = [
         title: "Dashboard",
         type: "link",
       },
-      {
-        icon: "home",
-        badge: false,
-        active: false,
-        path: `/dashboard/adminpanel`,
-        title: "Admin Dashboard",
-        type: "link",
-      },
+      // {
+      //   icon: "home",
+      //   badge: false,
+      //   active: false,
+      //   path: `/dashboard/adminpanel`,
+      //   title: "Admin Dashboard",
+      //   type: "link",
+      // },
       {
         title: "Booth Agent Dashboard",
         icon: "others",
@@ -44,6 +44,16 @@ export const MENUITEMS = [
           {
             path: `/booth-agent/voter-entry`,
             title: "Voter Data Entry Form",
+            type: "link",
+          },
+           {
+            path: `/booth-agent/voter-contact-info`,
+            title: "Voter Contact Information",
+            type: "link",
+          },
+          {
+            path: `/booth-agent/poll-day-operations`,
+            title: "Poll Day Operations",
             type: "link",
           },
           {

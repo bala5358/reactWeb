@@ -236,7 +236,11 @@ import SubmissionRatesPage from "../Components/ClusterSummary/SubmissionRatesPag
 import SurveyresponseForm from "../Components/SurveyresponseForm";
 import Tasklist from "../Components/Tasklist";
 import AdminPanelDashboard from "../Components/Dashboard/AdminPanelDashboard";
+import VoterContactInformation from "../Components/BoothManagement/VoterContactInformation";
+import PollDayOperation from "../Components/BoothManagement/PollDayOperation";
+import ConstituencyDashboard from "../Components/Pages/constituency/ConstituencyDashboard";
  
+
 export const routes = [
   { path: `/dashboard/:layout`, Component: <Default /> },
   { path: `/dashboard/e-commerce/:layout`, Component: <Ecommerce /> },
@@ -396,6 +400,9 @@ export const routes = [
   { path: `/booth-agent/field-notes/:layout`, Component: <FieldNotes /> },
    { path: `/booth-agent/Voter-age-filter/:layout`, Component: <BoothLevelVoterAgeFilter /> },
   { path: `/booth-agent/voter-list/:layout`, Component: <Guardian /> },
+  { path: `/booth-agent/voter-contact-info/:layout`, Component: <VoterContactInformation /> },
+  { path: `/booth-agent/poll-day-operations/:layout`, Component: <PollDayOperation /> },
+  
 
 
  //Yuga

@@ -8,7 +8,7 @@ export const MarketValue = "Market Value";
 export const Chat = "Chat";
 export const GeoJsonMaps = "GeoJsonMaps";
 export const DraggableMarkers = "DraggableMarkers";
-
+export const ElectoralVote = "Votes";
 export const NewProduct = "New Product";
 export const Location = "Location";
 export const RiskFactor = "Risk Factor";
