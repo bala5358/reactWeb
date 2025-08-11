@@ -170,7 +170,7 @@ export const MENUITEMS = [
         active: false,
         children: [
           { path: `/constituency-dashboard`, title: "dashboard", type: "link" },
-          { path: `/voter`, title: "Voter", type: "link" },
+          { path: `/singanallur`, title: "Voter", type: "link" },
           { path: `/booth-status`, title: "Booth Status", type: "link" },
           {
             path: `/party-performance`,
