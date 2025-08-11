@@ -1,18 +1,19 @@
 import React,{ Fragment,useState} from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import { Breadcrumbs } from '../../../AbstractElements';
-import FieldNotes from './FieldNotes';
 
-const BoothFieldNotes = () => {
-  
+import BoothTeamResourcePage from './BoothTeamResourcePage';
+
+const BoothTeamResource = () => {
+    
   return (
     <Fragment>
-      <Breadcrumbs mainTitle='Field Notes and Observations' parent='Users' title='Field Notes' />
+      <Breadcrumbs mainTitle='BoothTeam & Resource' parent='Users' title='Voter Data' />
       <Container fluid={true}>
         <div className='edit-profile'>
           <Row>
             <Col xl='12'>
-              <FieldNotes />
+              <BoothTeamResourcePage />
             </Col>
           </Row>
         </div>
@@ -20,4 +21,4 @@ const BoothFieldNotes = () => {
     </Fragment>
   );
 };
-export default BoothFieldNotes;
+export default BoothTeamResource;

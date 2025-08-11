@@ -12,13 +12,10 @@ const BoothTurnout = () => {
 
   return (
     <Fragment>
-      <Breadcrumbs mainTitle='Voter Data Entry Form' parent='Users' title='Voter Data' />
+      <Breadcrumbs mainTitle='Voters Turnout' parent='Users' title='Voters Turnout' />
       <Container fluid={true}>
         <div className='edit-profile'>
           <Row>
-            {/* <Col xl='12'>
-              <LeftSideTab />
-            </Col> */}
             <Col xl='12'>
               <VotersTurnout />
             </Col>

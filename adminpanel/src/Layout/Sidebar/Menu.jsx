@@ -55,6 +55,12 @@ export const MENUITEMS = [
             type: "link",
           },
           {
+            path: `/booth-agent/BoothTeam-Resource`,
+            title: "BoothTeam Resource",
+            type: "link",
+          },
+
+          {
             path: `/booth-agent/field-notes`,
             title: "Field Notes / Observations",
             type: "link",
