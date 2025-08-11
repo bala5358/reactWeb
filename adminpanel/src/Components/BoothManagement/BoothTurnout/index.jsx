@@ -5,7 +5,7 @@ import { Breadcrumbs } from '../../../../src/AbstractElements';
 import MyProfileEdit from '../../Application/Users/UsersEdit/MyProfile';
 import MaterialTabWithColorClass from '../../Bonus-Ui/Cards/TabCard/MaterialTabWithColor';
 import { RibbonData } from '../../Common/Data/Bonus-ui';
-// import RightSideTab from './RightSideTab';
+import RightSideTab from './RightSideTab';
 import VotersTurnout from './VotersTurnout';
 const BoothTurnout = () => {
     
@@ -26,4 +26,5 @@ const BoothTurnout = () => {
   );
 };
 export default BoothTurnout;
+
 
