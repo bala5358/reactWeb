@@ -18,7 +18,7 @@ export const SocialProfileStatus = [
 export const ElectionWidgetData = [
   {
     title: "BJP",
-    image: "1.png",
+    image: "bjp.png",
     votePercent: 38.6,
     totalVotes: 3_456_789,
     subTitle: "Total Votes",
@@ -30,7 +30,7 @@ export const ElectionWidgetData = [
   },
   {
     title: "TVK",
-    image: "1.png",
+    image: "tvk.png",
     votePercent: 27.3,
     totalVotes: 2_445_321,
     subTitle: "Total Votes",
@@ -42,7 +42,7 @@ export const ElectionWidgetData = [
   },
   {
     title: "DMK",
-    image: "1.png",
+    image: "dmk.png",
     votePercent: 18.4,
     totalVotes: 1_654_110,
     subTitle: "Total Votes",
@@ -54,7 +54,7 @@ export const ElectionWidgetData = [
   },
   {
     title: "AIDMK",
-    image: "1.png",
+    image: "default.png",
     votePercent: 10.1,
     totalVotes: 902_124,
     subTitle: "Total Votes",
@@ -66,7 +66,7 @@ export const ElectionWidgetData = [
   },
   {
     title: "NTK",
-    image: "1.png",
+    image: "ntk.png",
     votePercent: 5.6,
     totalVotes: 498_903,
     subTitle: "Total Votes",
@@ -78,7 +78,7 @@ export const ElectionWidgetData = [
   },
   {
     title: "Others",
-    image: "1.png",
+    image: "no-party.png",
     votePercent: 0,
     totalVotes: 0,
     subTitle: "Total Votes",
@@ -276,38 +276,75 @@ export const AllCampaignsTable = {
   ],
 };
 
+// export const NotificationsData = [
+//   {
+//     image: '1.jpg',
+//     title: 'DMK leading in Chennai South',
+//     subTitle: '5 minutes ago',
+//     badge: '+12,300 votes',
+//   },
+//   {
+//     image: '2.jpg',
+//     title: 'BJP gains in Coimbatore',
+//     subTitle: '10 minutes ago',
+//     badge: '+8,970 votes',
+//   },
+//   {
+//     image: '3.jpg',
+//     title: 'TVK closing gap in Salem',
+//     subTitle: '30 minutes ago',
+//     badge: '+3,000 votes',
+//   },
+//   {
+//     image: '4.jpg',
+//     title: 'AIADMK ahead in Trichy',
+//     subTitle: '1 hour ago',
+//     badge: '+5,200 votes',
+//   },
+//   {
+//     image: '5.jpg',
+//     title: 'NTK trailing in Madurai',
+//     subTitle: '2 hours ago',
+//     badge: '-1,100 votes',
+//   },
+// ];
+
+// src/components/Dashboard/constituencyData.js
+
 export const NotificationsData = [
-  {
-    image: '1.jpg',
-    title: 'DMK leading in Chennai South',
-    subTitle: '5 minutes ago',
-    badge: '+12,300 votes',
-  },
-  {
-    image: '2.jpg',
-    title: 'BJP gains in Coimbatore',
-    subTitle: '10 minutes ago',
-    badge: '+8,970 votes',
-  },
-  {
-    image: '3.jpg',
-    title: 'TVK closing gap in Salem',
-    subTitle: '30 minutes ago',
-    badge: '+3,000 votes',
-  },
-  {
-    image: '4.jpg',
-    title: 'AIADMK ahead in Trichy',
-    subTitle: '1 hour ago',
-    badge: '+5,200 votes',
-  },
-  {
-    image: '5.jpg',
-    title: 'NTK trailing in Madurai',
-    subTitle: '2 hours ago',
-    badge: '-1,100 votes',
-  },
+   { year: 2026, image: 'dmk.png', title: 'DMK wins Chennai South', subTitle: 'Announced just now', badge: '+25,430 votes', party: 'DMK' },
+  { year: 2026, image: 'bjp.png', title: 'BJP leads in Coimbatore', subTitle: 'Counting in progress', badge: '+8,920 votes', party: 'BJP' },
+  { year: 2026, image: 'admk.png', title: 'AIADMK gains in Trichy', subTitle: 'Halfway mark reached', badge: '+5,310 votes', party: 'AIADMK' },
+  { year: 2026, image: 'inc.png', title: 'INC holds Madurai', subTitle: 'Latest update', badge: '+4,800 votes', party: 'INC' },
+  { year: 2019, image: 'bjp.png', title: 'BJP wins Coimbatore', subTitle: 'Final result', badge: '+18,970 votes', party: 'BJP' },
+  { year: 2014, image: 'admk.png', title: 'AIADMK wins Trichy', subTitle: 'Final result', badge: '+15,210 votes', party: 'AIADMK' },
+  { year: 2009, image: 'inc.png', title: 'INC wins Madurai', subTitle: 'Final result', badge: '+12,500 votes', party: 'INC' },
+  { year: 2004, image: 'dmk.png', title: 'DMK wins Salem', subTitle: 'Final result', badge: '+10,200 votes', party: 'DMK' },
+  { year: 1999, image: 'bjp.png', title: 'BJP wins Coimbatore', subTitle: 'Final result', badge: '+9,870 votes', party: 'BJP' },
+  { year: 1998, image: 'admk.png', title: 'AIADMK wins Trichy', subTitle: 'Final result', badge: '+8,210 votes', party: 'AIADMK' },
+  { year: 1996, image: 'inc.png', title: 'INC wins Chennai North', subTitle: 'Final result', badge: '+7,430 votes', party: 'INC' },
+  { year: 1991, image: 'dmk.png', title: 'DMK wins Chennai South', subTitle: 'Final result', badge: '+6,900 votes', party: 'DMK' },
+  { year: 1989, image: 'bjp.png', title: 'BJP wins Salem', subTitle: 'Final result', badge: '+6,100 votes', party: 'BJP' },
+  { year: 1984, image: 'admk.png', title: 'AIADMK wins Trichy', subTitle: 'Final result', badge: '+5,430 votes', party: 'AIADMK' },
+  { year: 1980, image: 'inc.png', title: 'INC wins Coimbatore', subTitle: 'Final result', badge: '+5,000 votes', party: 'INC' },
+  { year: 1977, image: 'dmk.png', title: 'DMK wins Chennai South', subTitle: 'Final result', badge: '+4,800 votes', party: 'DMK' },
+  { year: 1971, image: 'bjp.png', title: 'BJP wins Madurai', subTitle: 'Final result', badge: '+4,200 votes', party: 'BJP' },
+  { year: 1967, image: 'admk.png', title: 'AIADMK wins Trichy', subTitle: 'Final result', badge: '+3,900 votes', party: 'AIADMK' },
+  { year: 1962, image: 'inc.png', title: 'INC wins Chennai North', subTitle: 'Final result', badge: '+3,500 votes', party: 'INC' },
+  { year: 1957, image: 'dmk.png', title: 'DMK wins Coimbatore', subTitle: 'Final result', badge: '+3,000 votes', party: 'DMK' },
+  { year: 1952, image: 'bjp.png', title: 'BJP wins Salem', subTitle: 'Final result', badge: '+2,700 votes', party: 'BJP' },
+  { year: 1946, image: 'inc.png', title: 'INC wins Madurai', subTitle: 'Final result', badge: '+2,200 votes', party: 'INC' },
+  { year: 1942, image: 'dmk.png', title: 'DMK wins Chennai South', subTitle: 'Final result', badge: '+1,800 votes', party: 'DMK' },
 ];
+
+export const DailyDropdown = [
+  "2026",
+  "2019",
+  "2014",
+  "2009",
+  "2004"
+];
+
 
 export const ElectionTableData = {
   header: [

@@ -12,8 +12,11 @@ const ConstituencyWidget = ({ data }) => {
           <div className='d-flex align-items-center gap-2'>
             <div className='social-icons'>
               <Image
+              
                 attrImage={{
-                  src: require(`../../../assets/images/dashboard-5/social/${data.image}`),
+                      style: { width: "50px", height: "50px" }, // ✅ plain JS object
+                   className: "img-fluid", // responsive image
+                  src: require(`../../../assets/images/party/${data.image}`),
                   alt: `${data.title} logo`,
                 }}
               />

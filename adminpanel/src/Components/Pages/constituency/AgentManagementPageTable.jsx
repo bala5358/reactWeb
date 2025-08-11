@@ -49,8 +49,10 @@ const AgentManagementPageTable = ({ externalData = [] }) => {
         </div>
       )}
       <DataTable
-        data={data}
+        // data={data}
+        // columns={boothColumns}
         columns={boothColumns}
+  data={AgentBoothData}
         striped
         center
         pagination

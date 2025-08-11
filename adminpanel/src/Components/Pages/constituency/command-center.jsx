@@ -141,9 +141,9 @@ export default function CommandCenter() {
       {/* Main Dashboard Grid */}
      <Row gutter={[16, 16]} className="dashboard-grid">
   {/* Metrics Section */}
-<Col xs={24} lg={24} className="metrics-col">
+{/* <Col xs={24} lg={24} className="metrics-col">
   <CoverageCards stats={data?.stats || {}} />
-</Col>
+</Col> */}
 
 
   {/* Heatmap Section - Full Width */}

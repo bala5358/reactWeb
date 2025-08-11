@@ -166,7 +166,16 @@ export const PurchaseNow = "Purchase Now";
 export const TotalUsers = "Total Users";
 export const FollowersGrowth = "Followers Growth";
 export const Inprogress = "Inprogress";
-export const DailyDropdown = ["Today", "Tomorrow", "Yesterday"];
+// export const DailyDropdown = ["Today", "Tomorrow", "Yesterday"];
+// Past 20 years Lok Sabha Election years (descending order)
+export const DailyDropdown = [
+  "2026",
+  "2019",
+  "2014",
+  "2009",
+  "2004"
+];
+
 export const WeeklyMonDropdown = ["Weekly", "Monthly", "Yearly"];
 export const CryptoDropdown = ["BTC", "ETH", "USD", "LTC"];
 
