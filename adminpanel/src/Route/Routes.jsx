@@ -238,8 +238,8 @@ import VoterContactInformation from "../Components/BoothManagement/VoterContactI
 import PollDayOperation from "../Components/BoothManagement/PollDayOperation";
 import ConstituencyDashboard from "../Components/Pages/constituency/ConstituencyDashboard";
 import BoothTeamResource from "../Components/BoothManagement/BoothTeamResource";
-import BoothTurnout from "../Components/BoothManagement/BoothTurnout";
 import BoothFieldNotes from "../Components/BoothManagement/BoothFieldNotes";
+import BoothTurnout from "../Components/BoothManagement/BoothTurnout";
 
 export const routes = [
   { path: `/dashboard/:layout`, Component: <Default /> },
