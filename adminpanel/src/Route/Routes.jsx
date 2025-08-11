@@ -406,7 +406,7 @@ export const routes = [
 
 
  //Yuga
-
+  { path: `/admin-dashboard/:layout`, Component: <AdminPanelDashboard/> },
  { path: `/add/constitution/:layout`, Component: <AddConstitutions /> },
  { path: `/add/constitution-list/:layout`, Component: <AllConstitutionsTable /> },
   { path: `/add/clusteragent/:layout`, Component: <AddClusterAgents /> },

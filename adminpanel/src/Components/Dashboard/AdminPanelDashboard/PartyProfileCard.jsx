@@ -2,11 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardBody } from 'reactstrap';
 import { Image, H5, LI, UL } from '../../../AbstractElements';
-
 import profileImage from '../../../assets/images/dashboard-5/profile.png';
 import SvgIcon from '../../Common/Component/SvgIcon';
 
-const SocialProfileCard = ({ selectedState }) => {
+const PartyProfileCard = ({ selectedState }) => {
   // 🔒 Hardcoded election data for 3 states
   const stateData = {
     'Kerala': {
@@ -81,4 +80,4 @@ const SocialProfileCard = ({ selectedState }) => {
   );
 };
 
-export default SocialProfileCard;
+export default PartyProfileCard;

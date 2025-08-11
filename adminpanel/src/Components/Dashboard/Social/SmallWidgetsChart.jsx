@@ -1,6 +1,5 @@
 import React from 'react';
 import { SmallWidgetsChartOption } from '../../../Data/Social/Chart';
-
 import ReactApexChart from 'react-apexcharts';
 
 const SmallWidgetsChart = ({ chartData }) => {

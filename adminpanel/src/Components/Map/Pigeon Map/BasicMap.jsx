@@ -14,7 +14,7 @@ const BasicMapComp = () => {
                     </CardHeader>
                     <CardBody>
                         <div className="map-js-height" id='map1'>
-                            <Map height={500} defaultCenter={[45.879, 4.6997]} defaultZoom={11}>
+                            <Map height={500} defaultCenter={[4.879, 4.6997]} defaultZoom={11}>
                             </Map>
                         </div>
                     </CardBody>

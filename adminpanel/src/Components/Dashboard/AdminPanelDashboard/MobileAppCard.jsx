@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, CardBody, CardHeader } from "reactstrap";
 import { H5 ,Image} from "../../../AbstractElements";
-
 import dmkLogo from "../../../assets/images/parties/dmk.png";
 import ldfLogo from "../../../assets/images/parties/ldf.png";
 import congressLogo from "../../../assets/images/parties/congress.png";

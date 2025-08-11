@@ -52,6 +52,59 @@ export const RadialProgressChart = {
     ],
   },
 };
+export const RadialProgressChart1 = {
+  series: [],
+  options: {
+    chart: {
+      height: 130,
+      type: "radialBar",
+      dropShadow: {
+        enabled: true,
+        top: 3,
+        left: 0,
+        blur: 10,
+        color: "",
+        opacity: 0.35,
+      },
+    },
+    plotOptions: {
+      radialBar: {
+        hollow: {
+          size: "60%",
+        },
+        track: {
+          strokeWidth: "60%",
+          opacity: 1,
+          margin: 5,
+        },
+        dataLabels: {
+          showOn: "always",
+          value: {
+            color: "var(--body-font-color)",
+            fontSize: "14px",
+            show: true,
+            offsetY: -10,
+            formatter: (val) => `${val}%`, // ✅ Show value with %
+          },
+        },
+      },
+    },
+    colors: [],
+    stroke: {
+      lineCap: "round",
+    },
+    responsive: [
+      {
+        breakpoint: 1500,
+        options: {
+          chart: {
+            height: 130,
+          },
+        },
+      },
+    ],
+  },
+};
 
 export const InstagramSubscriptionChart = {
   series: [
@@ -504,6 +557,8 @@ export const SmallWidgetsChartOption = {
     ],
   },
 };
+
+
 
 export const FollowerGenderChart = {
   series: [70, 60],

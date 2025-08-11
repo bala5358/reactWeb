@@ -184,3 +184,107 @@ export const AllCampaignsTable = {
     },
   ],
 };
+
+
+// ElectionData.js
+export const AdminPanelTablaData = {
+  "Tamil Nadu": {
+    header: ["Logo", "Party Name", "Winning %", "Total Votes", "Total Alliances"],
+    body: [
+      {
+        logo: "dmk.png",
+        party: "DMK",
+        winningPercentage: 55.2,
+        totalVotes: 9876543,
+        alliances: 3
+      },
+      {
+        logo: "aiadmk.png",
+        party: "AIADMK",
+        winningPercentage: 38.4,
+        totalVotes: 8765432,
+        alliances: 2
+      },
+      {
+        logo: "bjp.png",
+        party: "BJP",
+        winningPercentage: 4.5,
+        totalVotes: 345678,
+        alliances: 1
+      },
+      {
+        logo: "congress.png",
+        party: "Congress",
+        winningPercentage: 1.9,
+        totalVotes: 123456,
+        alliances: 2
+      }
+    ]
+  },
+  "Kerala": {
+    header: ["Logo", "Party Name", "Winning %", "Total Votes", "Total Alliances"],
+    body: [
+      {
+        logo: "ldf.png",
+        party: "LDF",
+        winningPercentage: 57.1,
+        totalVotes: 6543210,
+        alliances: 3
+      },
+      {
+        logo: "udf.png",
+        party: "UDF",
+        winningPercentage: 40.5,
+        totalVotes: 5432109,
+        alliances: 2
+      },
+      {
+        logo: "bjp.png",
+        party: "BJP",
+        winningPercentage: 2.2,
+        totalVotes: 234567,
+        alliances: 1
+      },
+      {
+        logo: "others.png",
+        party: "Others",
+        winningPercentage: 0.2,
+        totalVotes: 12345,
+        alliances: 0
+      }
+    ]
+  },
+  "Telangana": {
+    header: ["Logo", "Party Name", "Winning %", "Total Votes", "Total Alliances"],
+    body: [
+      {
+        logo: "trsv.png",
+        party: "TRS",
+        winningPercentage: 48.4,
+        totalVotes: 4321567,
+        alliances: 2
+      },
+      {
+        logo: "inc.png",
+        party: "INC",
+        winningPercentage: 40.2,
+        totalVotes: 3876543,
+        alliances: 2
+      },
+      {
+        logo: "bjp.png",
+        party: "BJP",
+        winningPercentage: 9.5,
+        totalVotes: 765432,
+        alliances: 1
+      },
+      {
+        logo: "others.png",
+        party: "Others",
+        winningPercentage: 1.9,
+        totalVotes: 123456,
+        alliances: 0
+      }
+    ]
+  }
+};

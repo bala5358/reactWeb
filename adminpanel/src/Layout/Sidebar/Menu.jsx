@@ -11,14 +11,7 @@ export const MENUITEMS = [
         title: "Dashboard",
         type: "link",
       },
-      // {
-      //   icon: "home",
-      //   badge: false,
-      //   active: false,
-      //   path: `/dashboard/adminpanel`,
-      //   title: "Admin Dashboard",
-      //   type: "link",
-      // },
+
       {
         title: "Booth Agent Dashboard",
         icon: "others",
@@ -46,7 +39,7 @@ export const MENUITEMS = [
             title: "Voter Data Entry Form",
             type: "link",
           },
-           {
+          {
             path: `/booth-agent/voter-contact-info`,
             title: "Voter Contact Information",
             type: "link",
@@ -210,6 +203,8 @@ export const MENUITEMS = [
         type: "sub",
         active: false,
         children: [
+          { path: `/admin-dashboard`, title: "Admins Dashboard", type: "link" },
+
           { path: `/add/constitution`, title: "Constitutions", type: "link" },
           {
             path: `/add/constitution-list`,
