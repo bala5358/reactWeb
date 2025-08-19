@@ -89,26 +89,48 @@ const handleLogin = async (e) => {
               <P>Enter your email & password to login</P>
               <FormGroup>
                 <Label className='col-form-label m-0'>Email Address</Label>
-                <Input
+                {/* <Input
                   type='email'
                   className='form-control'
                   required
                   placeholder='test@example.com'
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                />
+                /> */}
+                <Input
+  type='email'
+  name='email'
+  autoComplete='username'
+  className='form-control'
+  required
+  placeholder='test@example.com'
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+/>
+
               </FormGroup>
               <FormGroup className='position-relative'>
                 <Label className='col-form-label m-0'>Password</Label>
                 <div className='position-relative'>
-                  <Input
+                  {/* <Input
                     type={togglePassword ? 'text' : 'password'}
                     className='form-control'
                     required
                     placeholder='********'
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                  />
+                  /> */}
+                  <Input
+  type={togglePassword ? 'text' : 'password'}
+  name='password'
+  autoComplete='current-password'
+  className='form-control'
+  required
+  placeholder='********'
+  value={password}
+  onChange={(e) => setPassword(e.target.value)}
+/>
+
                   <div className='show-hide' onClick={() => setTogglePassword(!togglePassword)}>
                     <span className={togglePassword ? '' : 'show'}></span>
                   </div>
