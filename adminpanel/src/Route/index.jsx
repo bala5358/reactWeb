@@ -7,6 +7,7 @@ import LayoutRoutes from "../Route/LayoutRoutes";
 import Signin from "../Auth/Signin";
 import PrivateRoute from "./PrivateRoute";
 import { classes } from "../Data/Layouts";
+import LoginTwo from "../Components/Pages/Auth/LoginTwo";
 
 // setup fake backend
 
@@ -33,8 +34,10 @@ const Routers = () => {
           <Route path={"/"} element={<PrivateRoute />}>
             {login || authenticated ? (
               <>
-                <Route exact path={``} element={<Navigate to={`/login/${layout}`} />} />
-                <Route exact path={`/`} element={<Navigate to={`/login/${layout}`} />} />
+                {/* <Route exact path={``} element={<Navigate to={`/login/${layout}`} />} />
+                <Route exact path={`/`} element={<Navigate to={`/login/${layout}`} />} /> */}
+                   <Route exact path={`${process.env.PUBLIC_URL}`} element={<Navigate to={`${process.env.PUBLIC_URL}/login/${layout}`} />} />
+                <Route exact path={`/`} element={<Navigate to={`${process.env.PUBLIC_URL}/login/${layout}`} />} />
               </>
             ) : (
               ""
@@ -42,7 +45,7 @@ const Routers = () => {
             <Route path={`/*`} element={<LayoutRoutes />} />
           </Route>
 
-          <Route exact path={`/login`} element={<Signin />} />
+          <Route exact path={`/login`} element={<LoginTwo />} />
           {authRoutes.map(({ path, Component }, i) => (
             <Route path={path} element={Component} key={i} />
           ))}
