@@ -163,6 +163,7 @@ export const MENUITEMS = [
         ],
       },
 
+// Star Bala Start
       {
         title: "Constituency Hub",
         icon: "task",
@@ -202,6 +203,25 @@ export const MENUITEMS = [
           },
         ],
       },
+
+
+
+        {
+    menutitle: "Applications",
+    menucontent: "Ready to use Apps",
+    Items: [
+      { path: `/guardian`, icon: "user", title: "Guardian", type: "link" },
+      {
+        path: `/pollday`,
+        icon: "knowledgebase",
+        type: "link",
+        active: true,
+        title: "Poll",
+      },
+      { path: `/task`, icon: "task", type: "link", title: "Task" },
+    ],
+  },
+// Star Bala End
 
       {
         title: "Role Managements",
@@ -267,4 +287,82 @@ export const MENUITEMS = [
       { path: `/agent-List`, icon: "user", title: "Agent", type: "link" },
     ],
   },
+
+  // Star Bala
+  {
+    menutitle: "Menu",
+    menucontent: "Ready to use Apps",
+   
+    Items: [
+{ path: `/constituency-dashboard`, icon: "user", title: "Dashboard", type: "link" },
+    ]
+  },
+  {
+    menutitle: "Election Management",
+    menucontent: "Ready to use Apps",
+   
+    Items: [
+      { path: `/singanallur`, icon: "user", title: "Voter List", type: "link" },
+      {
+        path: `/polling-booth`,
+        icon: "knowledgebase",
+        type: "link",
+        active: true,
+        title: "Polling Booth Details",
+      },
+      { path: `/candidate-nominations`, icon: "task", type: "link", title: "Candidate Nominations" },
+       { path: `/real-time`, icon: "task", type: "link", title: "Real-Time Results" },
+    ],
+  },
+    {
+    menutitle: "Grievance & Complaints",
+    menucontent: "Ready to use Apps",
+    Items: [
+      { path: `/lodge`, icon: "user", title: "Lodge Complaint", type: "link" },
+      {
+        path: `/track`,
+        icon: "knowledgebase",
+        type: "link",
+        active: true,
+        title: "Track Status",
+      },
+      { path: `/resolved`, icon: "task", type: "link", title: "Resolved Issues" },
+    ],
+  },
+ 
+    {
+    menutitle: "Field Operations",
+    menucontent: "Ready to use Apps",
+    Items: [
+      { path: `/volunteer`, icon: "user", title: "Volunteer Management", type: "link" },
+      {
+        path: `/campaign-track`,
+        icon: "knowledgebase",
+        type: "link",
+        active: true,
+        title: "Campaign Tracking",
+      },
+      { path: `/BoothLevel`, icon: "task", type: "link", title: "Booth-Level Officers" },
+   
+    ],
+  },
+ 
+ 
+    {
+    menutitle: "Reports & Analytics",
+    menucontent: "Ready to use Apps",
+    Items: [
+      // { path: `/voter-turnout`, icon: "user", title: "Voter Turnout Stats", type: "link" },
+      {
+        path: `/demographic`,
+        icon: "knowledgebase",
+        type: "link",
+        active: true,
+        title: "Demographic Data",
+      },
+      { path: `/historical`, icon: "task", type: "link", title: "Historical Trends" },
+   
+    ],
+  },
+// End
 ];

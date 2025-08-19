@@ -241,6 +241,24 @@ import BoothTeamResource from "../Components/BoothManagement/BoothTeamResource";
 import BoothFieldNotes from "../Components/BoothManagement/BoothFieldNotes";
 import BoothTurnout from "../Components/BoothManagement/BoothTurnout";
 
+
+
+// import BoothTeamResource from "../Components/BoothManagement/BoothTeamResource";
+// import BoothFieldNotes from "../Components/BoothManagement/BoothFieldNotes";
+// import BoothTurnout from "../Components/BoothManagement/BoothTurnout";
+import CandidateNominations from "../Components/Pages/constituency/election-management/CandidateNominations";
+import PollingBoothDetails from "../Components/Pages/constituency/election-management/PollingBoothDetails";
+import RealTimeResults from "../Components/Pages/constituency/election-management/RealTimeResults";
+import LodgeComplaint from "../Components/Pages/constituency/grievance/LodgeComplaint";
+import TrackStatus from "../Components/Pages/constituency/grievance/TrackStatus";
+import VoterTurnoutStats from "../Components/Pages/constituency/reports/VoterTurnoutStats";
+import BoothLevelOfficers from "../Components/Pages/constituency/field-operations/BoothLevelOfficers";
+import CampaignTracking from "../Components/Pages/constituency/field-operations/CampaignTracking";
+import VolunteerManagement from "../Components/Pages/constituency/field-operations/VolunteerManagement";
+import ResolvedIssues from "../Components/Pages/constituency/grievance/ResolvedIssues";
+import DemographicData from "../Components/Pages/constituency/reports/DemographicData";
+import HistoricalTrends from "../Components/Pages/constituency/reports/HistoricalTrends";
+ 
 export const routes = [
   { path: `/dashboard/:layout`, Component: <Default /> },
   { path: `/dashboard/e-commerce/:layout`, Component: <Ecommerce /> },
@@ -291,6 +309,26 @@ export const routes = [
     path: `${process.env.PUBLIC_URL}/dashboard/default/Transgender/:layout`,
     Component: <TransGender />,
   },
+
+    // Star bala
+{ path: `/candidate-nominations/:layout`, Component: <CandidateNominations /> },
+  { path: `/polling-booth/:layout`, Component: <PollingBoothDetails /> },
+  { path: `/real-time/:layout`, Component: <RealTimeResults /> },
+ 
+  { path: `/BoothLevel/:layout`, Component: <BoothLevelOfficers /> },
+  { path: `/campaign-track/:layout`, Component: <CampaignTracking /> },
+  { path: `/volunteer/:layout`, Component: <VolunteerManagement /> },
+ 
+ 
+  { path: `/lodge/:layout`, Component: <LodgeComplaint /> },
+  { path: `/track/:layout`, Component: <TrackStatus /> },
+    { path: `/resolved/:layout`, Component: <ResolvedIssues /> },
+ 
+  { path: `/demographic/:layout`, Component: <DemographicData /> },
+  { path: `/historical/:layout`, Component: <HistoricalTrends /> },
+  { path: `/voter-turnout/:layout`, Component: <VoterTurnoutStats /> },
+
+
   { path: `/widgets/general/:layout`, Component: <General /> },
   { path: `/widgets/chart/:layout`, Component: <Chart /> },
 
