@@ -164,45 +164,45 @@ export const MENUITEMS = [
       },
 
 // Star Bala Start
-      {
-        title: "Constituency Hub",
-        icon: "task",
-        type: "sub",
-        active: false,
-        children: [
-          { path: `/constituency-dashboard`, title: "dashboard", type: "link" },
-          { path: `/singanallur`, title: "Voter", type: "link" },
-          { path: `/booth-status`, title: "Booth Status", type: "link" },
-          {
-            path: `/party-performance`,
-            title: "Party Performance",
-            type: "link",
-          },
+      // {
+      //   title: "Constituency Hub",
+      //   icon: "task",
+      //   type: "sub",
+      //   active: false,
+      //   children: [
+      //     { path: `/constituency-dashboard`, title: "dashboard", type: "link" },
+      //     { path: `/singanallur`, title: "Voter", type: "link" },
+      //     { path: `/booth-status`, title: "Booth Status", type: "link" },
+      //     {
+      //       path: `/party-performance`,
+      //       title: "Party Performance",
+      //       type: "link",
+      //     },
 
-          { path: `/alerts`, title: "Alerts", type: "link" },
-          {
-            path: `/agent-management`,
-            title: "Agent Management",
-            type: "link",
-          },
-          { path: `/reports`, title: "Reports", type: "link" },
-          {
-            path: `/command-center/constituency/:constituencyId`,
-            title: "Booth-Level-Heatmap",
-            type: "link",
-          },
-          {
-            path: `/command-center/constituency/:constituencyId/booths/:boothId`,
-            title: "Voter-Coverage-Tracker",
-            type: "link",
-          },
-          {
-            path: `/command-center/constituency/:constituencyId/live-feed`,
-            title: "Live-Submission-Feed",
-            type: "link",
-          },
-        ],
-      },
+      //     { path: `/alerts`, title: "Alerts", type: "link" },
+      //     {
+      //       path: `/agent-management`,
+      //       title: "Agent Management",
+      //       type: "link",
+      //     },
+      //     { path: `/reports`, title: "Reports", type: "link" },
+      //     {
+      //       path: `/command-center/constituency/:constituencyId`,
+      //       title: "Booth-Level-Heatmap",
+      //       type: "link",
+      //     },
+      //     {
+      //       path: `/command-center/constituency/:constituencyId/booths/:boothId`,
+      //       title: "Voter-Coverage-Tracker",
+      //       type: "link",
+      //     },
+      //     {
+      //       path: `/command-center/constituency/:constituencyId/live-feed`,
+      //       title: "Live-Submission-Feed",
+      //       type: "link",
+      //     },
+      //   ],
+      // },
 
 
 
